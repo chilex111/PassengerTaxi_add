@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	tools:ignore="HardcodedText"
+	android:layout_height="match_parent"
+	tools:context=".presentation.screen.all_trips_list_screen.AllTripsListScreen">
+
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:id="@+id/linearLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="24dp"
+			android:orientation="horizontal"
+			android:weightSum="4"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			android:baselineAligned="false">
+
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1">
+
+				<ImageView
+					android:id="@+id/imageView13"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/trips_rides_today"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.457"
+					android:contentDescription="@string/app_name"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"/>
+
+				<TextView
+					android:id="@+id/textView13"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:fontFamily="sans-serif-medium"
+					android:gravity="center_horizontal"
+					android:letterSpacing="-0.02"
+					android:textColor="@color/text_color_secondary"
+					android:textSize="12sp"
+					android:textStyle="normal"
+					app:layout_constraintEnd_toEndOf="@+id/imageView13"
+					app:layout_constraintStart_toStartOf="@+id/imageView13"
+					app:layout_constraintTop_toBottomOf="@+id/imageView13"
+					android:text="rides \ntoday" />
+
+				<TextView
+					android:id="@+id/dayCountTv"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="1"
+					android:textColor="#ffff"
+					app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+					app:layout_constraintEnd_toEndOf="@+id/imageView13"
+					app:layout_constraintStart_toStartOf="@+id/imageView13"
+					app:layout_constraintTop_toTopOf="@+id/imageView13"/>
+			</android.support.constraint.ConstraintLayout>
+
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1">
+
+				<ImageView
+					android:id="@+id/imageView123"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/trips_rides_this_week"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.457"
+					app:layout_constraintStart_toStartOf="parent"
+					android:contentDescription="@string/app_name"
+					app:layout_constraintTop_toTopOf="parent"/>
+
+				<TextView
+					android:id="@+id/textView133"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:fontFamily="sans-serif-medium"
+					android:gravity="center"
+					android:letterSpacing="-0.02"
+					android:textColor="@color/text_color_secondary"
+					android:textSize="12sp"
+					android:textStyle="normal"
+					app:layout_constraintEnd_toEndOf="@+id/imageView123"
+					app:layout_constraintStart_toStartOf="@+id/imageView123"
+					app:layout_constraintTop_toBottomOf="@+id/imageView123"
+					android:text=" rides \nthis week"/>
+
+				<TextView
+					android:id="@+id/weekCountTv"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="20"
+					android:textColor="#ffff"
+					app:layout_constraintBottom_toBottomOf="@+id/imageView123"
+					app:layout_constraintEnd_toEndOf="@+id/imageView123"
+					app:layout_constraintStart_toStartOf="@+id/imageView123"
+					app:layout_constraintTop_toTopOf="@+id/imageView123"/>
+			</android.support.constraint.ConstraintLayout>
+
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1">
+
+				<ImageView
+					android:id="@+id/imageView1231"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/trips_rides_this_month"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.457"
+					app:layout_constraintStart_toStartOf="parent"
+					android:contentDescription="@string/app_name"
+					app:layout_constraintTop_toTopOf="parent"/>
+
+				<TextView
+					android:id="@+id/textView1331"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:fontFamily="sans-serif-medium"
+					android:gravity="center"
+					android:letterSpacing="-0.02"
+					android:textColor="@color/text_color_secondary"
+					android:textSize="12sp"
+					android:textStyle="normal"
+					app:layout_constraintEnd_toEndOf="@+id/imageView1231"
+					app:layout_constraintStart_toStartOf="@+id/imageView1231"
+					app:layout_constraintTop_toBottomOf="@+id/imageView1231"
+					android:text=" rides \nthis month"/>
+
+				<TextView
+					android:id="@+id/monthCountTv"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="20"
+					android:textColor="#ffff"
+					app:layout_constraintBottom_toBottomOf="@+id/imageView1231"
+					app:layout_constraintEnd_toEndOf="@+id/imageView1231"
+					app:layout_constraintStart_toStartOf="@+id/imageView1231"
+					app:layout_constraintTop_toTopOf="@+id/imageView1231"/>
+			</android.support.constraint.ConstraintLayout>
+
+
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1">
+
+				<ImageView
+					android:id="@+id/datePickIv"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/trips_rides_pick_a_day"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.457"
+					app:layout_constraintStart_toStartOf="parent"
+					android:contentDescription="@string/app_name"
+					app:layout_constraintTop_toTopOf="parent"/>
+
+				<TextView
+					android:id="@+id/date_pick_tv"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="12dp"
+					android:layout_marginEnd="8dp"
+					android:fontFamily="sans-serif-medium"
+					android:gravity="center_horizontal"
+					android:letterSpacing="-0.02"
+					android:text="pick a day"
+					android:textColor="@color/cornflower"
+					android:textSize="12sp"
+					android:textStyle="normal"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/datePickIv"/>
+			</android.support.constraint.ConstraintLayout>
+		</LinearLayout>
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rvTripsAll"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:visibility="visible"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+			tools:listitem="@layout/all_trips_item"/>
+
+		<TextView
+			android:id="@+id/tvNoTrips"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="51dp"
+			android:layout_marginEnd="8dp"
+			android:fontFamily="sans-serif-medium"
+			android:gravity="center_horizontal"
+			android:letterSpacing="-0.01"
+			android:text="No trips were made this day"
+			android:textColor="@color/text_color_secondary"
+			android:textSize="16sp"
+			android:textStyle="normal"
+			android:visibility="invisible"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+		<ProgressBar
+			android:id="@+id/progressBarTrips"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginBottom="8dp"
+			android:minWidth="50dp"
+			android:minHeight="50dp"
+			android:visibility="gone"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
+
+	</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

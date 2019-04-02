@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/card_trip_details"
+	android:layout_marginRight="16dp"
+	android:layout_marginLeft="16dp"
+	android:layout_marginTop="16dp"
+	tools:context=".presentation.screen.notifications.details.MyCarsNotificationActivity">
+
+	<TextView
+		android:id="@+id/notifyTripDetailsTitleTv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="28dp"
+		android:layout_marginTop="23dp"
+		android:fontFamily="sans-serif-medium"
+		android:letterSpacing="-0.01"
+		android:textColor="@color/text_color_main"
+		android:textSize="14sp"
+		android:textStyle="normal"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="Your car is broken"/>
+
+	<TextView
+		android:id="@+id/notifyTripDetailsDateTv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="23dp"
+		android:layout_marginEnd="28dp"
+		android:fontFamily="sans-serif"
+		android:gravity="end"
+		android:letterSpacing="-0.01"
+		android:textColor="@color/light_grey_blue"
+		android:textSize="12sp"
+		android:textStyle="normal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="16.02.18"/>
+
+	<TextView
+		android:id="@+id/notifyTripDetailsTextTv"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="28dp"
+		android:layout_marginTop="23dp"
+		android:layout_marginEnd="28dp"
+		android:layout_marginBottom="14dp"
+		android:fontFamily="sans-serif"
+		android:letterSpacing="-0.01"
+		android:lineSpacingExtra="6sp"
+
+		android:text="A driver reported that your car Subaru Impreza ABC-576YU is broken. To find out more please call the driver."
+		android:textColor="@color/text_color_secondary"
+		android:textSize="14sp"
+		android:textStyle="normal"
+		app:layout_constraintBottom_toTopOf="@+id/textView16"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/notifyTripDetailsTitleTv"
+		/>
+
+	<TextView
+		android:id="@+id/money_earned_tv_notify"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="8dp"
+		android:fontFamily="sans-serif-medium"
+		android:gravity="end"
+		android:letterSpacing="-0.01"
+		android:textColor="@color/text_color_main"
+		android:textSize="20sp"
+		android:textStyle="normal"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.46"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView16"
+		app:layout_constraintVertical_bias="0.51"
+		tools:text=" ₦2500"/>
+
+
+	<TextView
+		android:id="@+id/textView16"
+		android:layout_width="wrap_content"
+		android:layout_height="2dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginBottom="8dp"
+		android:fontFamily="sans-serif-medium"
+		android:gravity="center_horizontal"
+		android:textColor="@color/cornflower"
+		android:textSize="14sp"
+		android:textStyle="normal"
+		android:visibility="invisible"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.68"
+		tools:text="CALL THE DRIVER"/>
+
+	<ImageView
+		android:id="@+id/logoMoneyIv"
+		android:layout_width="25dp"
+		android:layout_height="25dp"
+		android:layout_marginStart="8dp"
+		app:layout_constraintBottom_toBottomOf="@+id/money_earned_tv_notify"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toEndOf="@+id/money_earned_tv_notify"
+		app:layout_constraintTop_toTopOf="@+id/money_earned_tv_notify"
+		app:srcCompat="@drawable/ic_card"/>
+
+
+</android.support.constraint.ConstraintLayout>

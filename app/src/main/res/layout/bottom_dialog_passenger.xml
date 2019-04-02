@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/txtTitleCardPassenger"
+        style="@style/TxtStyleTitle"
+        android:text="@string/txt_lable_taxi_for"
+        android:layout_marginTop="@dimen/indentation_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/icFacePurple"/>
+
+    <ImageView
+        android:id="@+id/icBackPassengerChose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_purple"
+        android:padding="@dimen/indentation_16"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTitleCardPassenger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTitleCardPassenger"
+        tools:ignore="contentDescription"/>
+
+    <ImageView
+        android:id="@+id/icFacePurple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/indentation_30"
+        android:layout_marginBottom="@dimen/indentation_70"
+        android:background="@drawable/button_selector_me"
+        android:padding="@dimen/indentation_10"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextPassengerNumber"
+        app:layout_constraintEnd_toStartOf="@id/icFaceWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitleCardPassenger"
+        tools:ignore="contentDescription" />
+
+    <ImageView
+        android:id="@+id/icFaceWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/indentation_30"
+        android:layout_marginBottom="@dimen/indentation_70"
+        android:background="@drawable/button_selector_other"
+        android:padding="@dimen/indentation_10"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextPassengerNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icFacePurple"
+        app:layout_constraintTop_toBottomOf="@id/txtTitleCardPassenger"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/txtMe"
+        style="@style/TxtStyleSecondary"
+        android:text="@string/txt_me"
+        android:textColor="@color/text_view_selectable_dark_purple"
+        app:layout_constraintBottom_toTopOf="@id/btnNextPassengerNumber"
+        app:layout_constraintStart_toStartOf="@id/icFacePurple"
+        app:layout_constraintEnd_toEndOf="@id/icFacePurple"
+        android:padding="@dimen/indentation_10"
+        android:layout_marginBottom="@dimen/indentation_26"/>
+
+    <TextView
+        android:id="@+id/txtSomeoneElse"
+        style="@style/TxtStyleSecondary"
+        android:text="@string/txt_someone_else"
+        android:textColor="@color/text_view_selectable_dark_purple"
+        app:layout_constraintBottom_toTopOf="@id/btnNextPassengerNumber"
+        app:layout_constraintEnd_toEndOf="@id/icFaceWhite"
+        app:layout_constraintStart_toStartOf="@id/icFaceWhite"
+        android:padding="@dimen/indentation_10"
+        android:layout_marginBottom="@dimen/indentation_26"/>
+
+    <Button
+        android:id="@+id/btnNextPassengerNumber"
+        style="@style/BottomButtonDark"
+        android:text="@string/txt_button_next"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLeaveNote" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+	<TextView
+		android:id="@+id/notifyTitleTv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="14dp"
+		android:layout_marginTop="22dp"
+		android:fontFamily="sans-serif-medium"
+		android:letterSpacing="-0.01"
+		android:text="Negative bonus balance"
+		android:textColor="@color/text_color_main"
+		android:textSize="14sp"
+		android:textStyle="normal"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+
+	<TextView
+		android:id="@+id/notifyDateTv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="23dp"
+		android:layout_marginEnd="18dp"
+		android:fontFamily="sans-serif"
+		android:gravity="end"
+		android:letterSpacing="-0.01"
+		android:text="16.02.18"
+		android:textColor="@color/light_grey_blue"
+		android:textSize="12sp"
+		android:textStyle="normal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<TextView
+		android:id="@+id/notifyTextTv"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="13dp"
+		android:layout_marginTop="13dp"
+		android:layout_marginEnd="2dp"
+		android:fontFamily="sans-serif"
+		android:letterSpacing="0.04"
+		android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…"
+		android:textColor="@color/text_color_secondary"
+		android:textSize="12sp"
+		android:textStyle="normal"
+		app:layout_constraintEnd_toStartOf="@+id/notifyDateTv"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/notifyTitleTv"/>
+
+	<ImageView
+		android:id="@+id/notifyDetailsBtn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="13dp"
+		android:layout_marginBottom="8dp"
+		android:src="@drawable/ic_keyboard_arrow_right"
+		app:layout_constraintBottom_toBottomOf="@+id/view3"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/notifyDateTv"/>
+
+	<View
+		android:id="@+id/view3"
+		android:layout_width="0dp"
+		android:layout_height="1dp"
+		android:layout_marginTop="9dp"
+		android:background="#a7adb8"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/notifyTextTv"/>
+</android.support.constraint.ConstraintLayout>

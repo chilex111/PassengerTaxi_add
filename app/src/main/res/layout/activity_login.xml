@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/purpule_light">
+
+	<TextView
+		android:id="@+id/txtAuthError"
+		style="@style/TxtStyleTitle"
+		android:layout_gravity="center"
+		android:text="@string/txt_auth_screen_error_message"
+		android:visibility="gone"/>
+
+	<ProgressBar
+		android:id="@+id/progressBarLineAuth"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:indeterminate="true"
+		android:layout_margin="@dimen/indentation_15"/>
+
+</FrameLayout>

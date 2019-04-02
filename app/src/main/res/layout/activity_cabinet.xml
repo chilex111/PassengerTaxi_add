@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/colorWhite"
+			android:orientation="vertical">
+
+			<android.support.constraint.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/text_color_main">
+
+				<RelativeLayout
+					android:id="@+id/layoutPhotoCabinet"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="@dimen/indentation_4"
+					android:layout_margin="@dimen/indentation_30"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="parent">
+					<ImageView
+						android:id="@+id/icCabinetPhoto"
+						android:layout_width="@dimen/indentation_116"
+						android:layout_height="@dimen/indentation_116"
+						android:layout_marginBottom="@dimen/indentation_10"
+						android:background="@drawable/circle_border"
+						android:padding="@dimen/indentation_4"
+						tools:src="@drawable/ic_card"/>
+
+					<TextView
+						android:id="@+id/txtCabinetTitleRating"
+						style="@style/TxtStyleTitle"
+						android:layout_width="@dimen/indentation_100"
+						android:layout_height="@dimen/indentation_26"
+						android:layout_alignBottom="@+id/icCabinetPhoto"
+						android:layout_centerHorizontal="true"
+						android:background="@drawable/background_txt_rating_cabinet"
+						android:drawablePadding="@dimen/indentation_4"
+						android:drawableRight="@drawable/ic_star_mini"
+						android:paddingBottom="@dimen/indentation_1"
+						android:paddingEnd="@dimen/indentation_24"
+						android:paddingStart="@dimen/indentation_24"
+						android:paddingTop="@dimen/indentation_1"
+						android:textSize="@dimen/text_size_16"
+						tools:text="5"/>
+
+					<ImageView
+						android:id="@+id/icCabinetTitleNew"
+						android:layout_width="wrap_content"
+						android:layout_height="@dimen/indentation_40"
+						android:scaleType="fitXY"
+						android:layout_alignParentBottom="true"
+						android:layout_alignStart="@id/icCabinetPhoto"
+						android:layout_alignEnd="@id/icCabinetPhoto"
+						android:src="@drawable/rating_new"
+						android:visibility="visible"
+						tools:ignore="contentDescription"/>
+
+				</RelativeLayout>
+
+				<TextView
+					android:id="@+id/txtCabinetName"
+					style="@style/TxtStyleTitle"
+					android:layout_toRightOf="@id/layoutPhotoCabinet"
+					android:textColor="@color/colorWhite"
+					android:textSize="@dimen/text_size_16"
+					android:layout_marginStart="@dimen/indentation_16"
+					android:layout_marginTop="@dimen/indentation_50"
+					app:layout_constraintStart_toEndOf="@+id/layoutPhotoCabinet"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="Suanu Oparei"/>
+
+				<TextView
+					android:id="@+id/txtCabinetNumber"
+					style="@style/TxtStyleSecondary"
+					android:textColor="@color/colorWhite"
+					android:textStyle="bold"
+					android:layout_marginTop="@dimen/indentation_12"
+					app:layout_constraintStart_toStartOf="@+id/txtCabinetName"
+					app:layout_constraintTop_toBottomOf="@+id/txtCabinetName"
+					tools:text="+2340701234567"/>
+
+				<ImageView
+					android:id="@+id/icGoToPersonalDataCabinet"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentEnd="true"
+					android:layout_alignTop="@+id/txtCabinetName"
+					android:src="@drawable/ic_keyboard_arrow_right"
+					android:layout_marginEnd="@dimen/indentation_16"
+					app:layout_constraintBottom_toBottomOf="@+id/txtCabinetName"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="@+id/txtCabinetName"/>
+
+			</android.support.constraint.ConstraintLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/indentation_14"
+				android:background="@drawable/bottob_board_cabinet"
+				android:layout_marginTop="-6dp"
+				app:layout_constraintBottom_toBottomOf="parent"/>
+
+			<android.support.constraint.ConstraintLayout
+				android:id="@+id/cardTabWallet"
+				android:layout_width="@dimen/wallet_card_width"
+				android:layout_height="@dimen/wallet_card_height"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="@dimen/indentation_26"
+				android:background="@drawable/wallet_card">
+
+				<TextView
+					android:id="@+id/txtTabWalletCardTitle"
+					style="@style/TxtStyleTitle"
+					android:layout_marginTop="@dimen/indentation_16"
+					android:drawablePadding="@dimen/indentation_55"
+					android:drawableRight="@drawable/ic_gift"
+					android:text="@string/txt_wallet_card_title"
+					android:textSize="@dimen/text_size_14"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"/>
+
+				<TextView
+					android:id="@+id/txtWalletTabAccountTab"
+					style="@style/TxtStyleSecondary"
+					android:gravity="center_horizontal"
+					android:layout_marginBottom="@dimen/indentation_24"
+					android:text="@string/txt_wallet_cabinet_subtitle"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="@id/txtTabWalletCardTitle"
+					app:layout_constraintStart_toStartOf="@id/txtTabWalletCardTitle"/>
+
+			</android.support.constraint.ConstraintLayout>
+
+			<ImageView
+				android:id="@+id/dottedLineView"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/indentation_4"
+				android:src="@drawable/dotted_line"
+				android:layerType="software"
+				android:layout_marginTop="@dimen/indentation_26"
+				android:layout_below="@id/cardTabWallet"
+				tools:ignore="contentDescription"/>
+
+			<TextView
+				android:id="@+id/txtCabinetPayment"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_card"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_payment_methods"/>
+
+			<TextView
+				android:id="@+id/txtCabinetPassword"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_password"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_password"/>
+
+			<TextView
+				android:id="@+id/txtCabinetMyTrip"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_trips"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_my_trips"/>
+
+			<TextView
+				android:id="@+id/txtCabinetMyFavorite"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_favorite"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_my_favorite"/>
+
+			<TextView
+				android:id="@+id/txtCabinetNews"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_news"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_news"/>
+
+
+			<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView
+					android:id="@+id/txtCabinetReferral"
+					style="@style/TxtStyleMain"
+					android:layout_width="match_parent"
+					android:gravity="start|center_vertical"
+					android:drawableStart="@drawable/ic_link"
+					android:drawablePadding="@dimen/indentation_30"
+					android:layout_marginStart="@dimen/text_size_16"
+					android:layout_marginEnd="@dimen/indentation_16"
+					android:layout_marginTop="@dimen/indentation_30"
+					android:text="@string/txt_cabinet_my_referral_link"/>
+
+				<ImageView
+					android:id="@+id/icCabinetShare"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="bottom|end"
+					android:clickable="true"
+					android:focusable="true"
+					android:src="@drawable/btn_share_selector"
+					android:paddingEnd="@dimen/indentation_16"/>
+
+			</FrameLayout>
+
+			<TextView
+				android:id="@+id/txtCabinetReferralLink"
+				style="@style/TxtStyleSecondary"
+				android:layout_width="match_parent"
+				android:textColor="@color/text_color_main"
+				android:layout_marginStart="@dimen/indentation_16"
+				android:layout_marginEnd="@dimen/indentation_16"
+				android:layout_marginTop="@dimen/indentation_8"
+				android:background="@drawable/bottom_border_txt_cabinet"
+				tools:text="dfjg346t456tgrt455m514t256t6t26"/>
+
+			<TextView
+				android:id="@+id/txtCabinetBecameCarowner"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_cars"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_become_car_owner"/>
+
+			<TextView
+				android:id="@+id/txtCabinetAboutApp"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_about_app"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_about_taxi_africa"/>
+
+			<TextView
+				android:id="@+id/txtCabinetSupport"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_support"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_support"/>
+
+			<TextView
+				android:id="@+id/txtCabinetFaQ"
+				style="@style/TxtStyleMain"
+				android:gravity="start|center_vertical"
+				android:drawableStart="@drawable/ic_faq"
+				android:drawablePadding="@dimen/indentation_30"
+				android:layout_marginStart="@dimen/text_size_16"
+				android:layout_marginTop="@dimen/indentation_24"
+				android:textColor="@color/text_view_selectable"
+				android:text="@string/txt_cabinet_faq"/>
+
+			<TextView
+				android:id="@+id/txtTabCabinetSignout"
+				style="@style/TxtStyleSecondary"
+				android:fontFamily="sans-serif-medium"
+				android:textColor="@color/text_view_selectable_purple"
+				android:layout_gravity="center_horizontal"
+				android:layout_margin="@dimen/indentation_24"
+				android:text="@string/txt_cabinet_sign_out"/>
+
+		</LinearLayout>
+
+		<ProgressBar
+			android:id="@+id/progressBarTabCabinet"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal|bottom"
+			android:layout_marginBottom="@dimen/indentation_200"
+			android:visibility="gone"/>
+
+	</FrameLayout>
+
+</android.support.v4.widget.NestedScrollView>

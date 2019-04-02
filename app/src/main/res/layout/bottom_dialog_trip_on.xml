@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:ignore="HardcodedText"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tripDetailsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/indentation_24"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/text_size_14"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color_main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dottedLine"
+        android:text="@string/txt_on_a_trip" />
+
+    <Button
+        android:id="@+id/driveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/indentation_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="DRIVE"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/driveButton"
+        android:text="DELETE"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/dottedLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/divider_long_grey"
+        android:layout_marginTop="@dimen/indentation_46"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tableView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/indentation_20"
+        android:layout_marginEnd="@dimen/indentation_16"
+        android:layout_marginTop="@dimen/indentation_20"
+        android:layout_marginBottom="@dimen/indentation_20"
+        app:layout_constraintTop_toBottomOf="@id/dottedLine"
+        app:layout_constraintBottom_toTopOf="@id/dottedLine2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/dottedLine2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/divider_long_grey"
+        android:layout_marginBottom="@dimen/indentation_46"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tripTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="@color/purple_dark"
+        android:text="@string/txt_trip_number"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/text_size_14"
+        android:layout_marginBottom="@dimen/indentation_14"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/indentation_16"
+        app:layout_constraintLeft_toLeftOf="@id/tripDetailsTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dottedLine2"
+        />
+
+</android.support.constraint.ConstraintLayout>

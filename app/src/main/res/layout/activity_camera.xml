@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/containerCameraActivity"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<io.fotoapparat.view.CameraView
+		android:id="@+id/cameraView"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+
+	<include
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:id="@+id/overlayTake"
+		layout="@layout/layout_overlay_photo_take"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+	<include
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:id="@+id/overlayInshTake"
+		layout="@layout/layout_overlay_licence_photo_take"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		android:visibility="gone"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+
+	<include
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:id="@+id/overlayCircleTake"
+		layout="@layout/layout_overlay_circle_photo_take"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		android:visibility="gone"/>
+
+	<include
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:visibility="gone"
+		android:id="@+id/overlayReady"
+		layout="@layout/layout_overlay_photo_ready"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+
+	<View
+		android:layout_width="0dp"
+		android:layout_height="@dimen/indentation_116"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"/>
+
+	<View
+		android:id="@+id/viewCameraIcon"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/indentation_116"
+		android:background="@android:color/black"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<android.support.v7.widget.AppCompatImageView
+		android:id="@+id/icCamera"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/camera_alt"
+		android:padding="@dimen/indentation_16"
+		app:layout_constraintBottom_toBottomOf="@id/viewCameraIcon"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@id/viewCameraIcon" />
+
+	<include
+		android:id="@+id/layoutCameraPermissionDenied"
+		android:visibility="gone"
+		layout="@layout/layout_photo_permission_denied"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+
+	<include
+		android:id="@+id/progressBarCameraActivity"
+		layout="@layout/layout_progress_bar"/>
+
+</android.support.constraint.ConstraintLayout>

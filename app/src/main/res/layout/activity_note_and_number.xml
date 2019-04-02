@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/toolbarNoteAndNumberScreen"
+        layout="@layout/layout_toolbar"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputLayoutLeaveNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/indentation_16"
+        android:textColorHint="@color/text_color_secondary"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        app:hintTextAppearance="@style/StyleInputLayout"
+        app:counterOverflowTextAppearance="@style/ThemeInputLayoutCounter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarNoteAndNumberScreen"
+        android:visibility="gone">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editLeaveNote"
+            style="@style/StyleEditText"
+            android:theme="@style/AppTheme.ThemeEditTextAppearance"
+            android:inputType="textMultiLine"
+            android:maxLength="40"
+            android:hint="@string/txt_hint_leave_note"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputLayoutPhoneCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/indentation_16"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarNoteAndNumberScreen"
+        app:layout_constraintEnd_toStartOf="@id/inputLayoutPhoneNum"
+        android:visibility="gone">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editPhoneCode"
+            android:theme="@style/AppTheme.StyleEditTextAppearanceTransparent"
+            android:gravity="center"
+            style="@style/StyleEditText"
+            android:hint="@string/txt_hint_enter_code"
+            android:focusable="false"
+            android:clickable="false"
+            android:longClickable="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputLayoutPhoneNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="3"
+        android:layout_marginTop="@dimen/indentation_14"
+        android:layout_marginEnd="@dimen/indentation_16"
+        android:textColorHint="@color/text_color_secondary"
+        app:hintTextAppearance="@style/StyleInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarNoteAndNumberScreen"
+        app:layout_constraintStart_toEndOf="@id/inputLayoutPhoneCode"
+        android:visibility="gone">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editPhoneNumber"
+            style="@style/StyleEditText"
+            android:theme="@style/AppTheme.ThemeEditTextAppearance"
+            android:hint="@string/txt_hint_enter_number"
+            android:maxLength="9"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+</android.support.constraint.ConstraintLayout>

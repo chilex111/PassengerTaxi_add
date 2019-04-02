@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/txtBottomDialog"
+		style="@style/TxtStyleMain"
+		android:layout_width="match_parent"
+		android:gravity="start"
+		android:textColor="@color/text_view_selectable"
+		android:layout_marginStart="@dimen/indentation_16"
+		android:paddingTop="@dimen/indentation_22"
+		android:paddingBottom="@dimen/indentation_22"
+		android:text="@string/txt_bottom_dialog_message"/>
+
+	<TextView
+		android:id="@+id/txtBottomDialogDelete"
+		style="@style/TxtStyleMain"
+		android:layout_width="match_parent"
+		android:gravity="start"
+		android:textColor="@color/button_selector_red"
+		android:layout_marginStart="@dimen/indentation_16"
+		android:paddingBottom="@dimen/indentation_22"
+		android:text="@string/txt_bottom_dialog_delete"
+		android:visibility="gone"/>
+
+</LinearLayout>

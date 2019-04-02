@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_12">6sp</dimen>
+    <dimen name="text_size_14">8sp</dimen>
+    <dimen name="text_size_16">13sp</dimen>
+    <dimen name="text_size_18">12sp</dimen>
+    <dimen name="text_size_20">14sp</dimen>
+    <dimen name="text_size_22">15sp</dimen>
+    <dimen name="text_size_24">18sp</dimen>
+    <dimen name="text_size_26">20sp</dimen>
+
+
+    <!--for photo frame-->
+    <dimen name="photo_frame_width">180dp</dimen>
+    <dimen name="photo_frame_height">134dp</dimen>
+    <dimen name="photo_passport_frame_height">150dp</dimen>
+    <dimen name="photo_car_insurance_height">210dp</dimen>
+    <dimen name="photo_car_insurance_width">146dp</dimen>
+    <dimen name="photo_frame_circle_width">176dp</dimen>
+    <dimen name="photo_frame_circle_height">176dp</dimen>
+    <dimen name="photo_frame_circle_line_width">178dp</dimen>
+    <dimen name="photo_frame_circle_line_height">178dp</dimen>
+</resources>

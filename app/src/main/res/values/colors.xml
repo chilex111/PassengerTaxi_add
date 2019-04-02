@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f4654</color>
+    <color name="colorPrimaryDark">#323640</color>
+    <color name="colorAccent">#9399ff</color>
+
+    <color name="purple_dark">#4c50ac</color>
+    <color name="status_bar_color_translucent">#33000000</color>
+    <color name="grey">#a7adb8</color>
+    <color name="light_grey">#c4c9d5</color>
+    <color name="light_grey_transperent">#92c4c9d5</color>
+    <color name="purpule_light">#edf1f1ff</color>
+    <color name="text_color_secondary">#697283</color>
+    <color name="text_color_main">#3f4654</color>
+    <color name="stroke_error_color_login">#c9ef5769</color>
+    <color name="color_line_gray">#35979797</color>
+    <color name="background_txt_number_car">#51cacdd1</color>
+    <color name="background_plate_number">#cacdd1</color>
+    <color name="mango">#fe9e1e</color>
+    <color name="mango1">#d7dee7</color>
+    <color name="sky_blue">#75a6ff</color>
+
+    <color name="back_scanner">#3F4654</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="shadow_color">#80000000</color>
+    <color name="more_light_grey">#c9c9c9</color>
+    <color name="background_for_selectable">#e5e2e2e2</color>
+    <color name="btn_background_red">#ff7a7a</color>
+    <color name="where_to_text_disabled">#A7ADB8</color>
+    <color name="blacker">#444444</color>
+    <color name="dark_grey">#4a4a4a</color>>
+
+    <color name="black_38">#61000000</color>
+
+    <color name="text_grey">#A7ADB8</color>
+    <color name="fab_bg">#7279FF</color>
+    <color name="light_grey_blue">#a7adb8</color>
+    <color name="white_30">#4bffffff</color>
+    <color name="cornflower">#7279ff</color>
+    <color name="black_87">#de000000</color>
+    <color name="black_54">#8a000000</color>
+    <color name="greyish_brown">#444444</color>
+    <color name="gray_car_number">#65cacdd1</color>
+	<color name="black_67">#ab000000</color>
+
+</resources>

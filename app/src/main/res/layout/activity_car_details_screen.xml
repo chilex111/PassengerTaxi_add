@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:ignore="HardcodedText"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/cardview_default_elevation">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="37dp"
+            android:src="@drawable/divider_long"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"/>
+
+        <ImageView
+            android:id="@+id/driverPhotoDetails1"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/photo_dummy_cabinet"
+            android:src="@drawable/photo"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/firstLastNameTv1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.02"
+            android:text="Alfa Romeo 159 Sportwagon"
+            android:textColor="@color/text_color_main"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/delete_menu"
+            app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/driverPlateTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/background_plate_number"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="-0.01"
+            android:paddingLeft="7dp"
+            android:paddingTop="5dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="5dp"
+            android:text="ABC -123 DE"
+            android:textColor="@color/text_color_main"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails1"
+            app:layout_constraintTop_toBottomOf="@+id/firstLastNameTv1" />
+
+        <TextView
+            android:id="@+id/yearOfExperienceTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="-0.02"
+            android:text="2017 year of manufacture"
+            android:textColor="@color/text_color_main"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails1"
+            app:layout_constraintTop_toBottomOf="@+id/driverPlateTv1" />
+
+        <TextView
+            android:id="@+id/driverPhoneTvDet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="-0.02"
+            android:text="location can`t be detected"
+            android:textColor="@color/light_grey_blue"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/location_iv"
+            app:layout_constraintTop_toBottomOf="@+id/yearOfExperienceTv1" />
+
+        <ImageView
+            android:id="@+id/location_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails1"
+            app:layout_constraintTop_toBottomOf="@+id/yearOfExperienceTv1"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/ic_pin_light_copy" />
+
+        <TextView
+            android:id="@+id/location_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="end"
+            android:letterSpacing="-0.01"
+            android:text="SHOW THE LAST POSITION"
+            android:textColor="@color/cornflower"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails1"
+            app:layout_constraintTop_toBottomOf="@+id/driverPhoneTvDet" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="40dp"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location_click"
+            app:layout_constraintVertical_bias="0.0">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/layoutWithDriver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="100dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/carPhoto"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="16dp"
+                            android:contentDescription="@string/app_name"
+                            android:layout_marginTop="24dp"
+                            android:background="@drawable/photo_dummy_cabinet"
+                            android:src="@drawable/photo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/driver"/>
+
+                        <TextView
+                            android:id="@+id/driver_first_last_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="-0.02"
+                            android:text="Finmilayo Odoemene"
+                            android:textColor="@color/text_color_main"
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toEndOf="@+id/carPhoto"
+                            app:layout_constraintTop_toBottomOf="@+id/driver"/>
+
+
+                        <TextView
+                            android:id="@+id/driver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="-0.02"
+                            android:text="Your driver"
+                            android:textColor="@color/text_color_main"
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/driverPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="-0.02"
+                            android:text="+2340701234567"
+                            android:textColor="@color/cornflower"
+                            android:onClick="callToDriverD"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toEndOf="@+id/carPhoto"
+                            app:layout_constraintTop_toBottomOf="@+id/driver_first_last_name"/>
+
+
+                        <TextView
+                            android:id="@+id/sinceDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="sans-serif"
+                            android:letterSpacing="-0.01"
+                            android:text="Your driver since 23.02.19"
+                            android:textColor="@color/text_color_secondary"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/driverPhone"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/layoutWithoutDriver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="-0.02"
+                            android:text="You have no driver yet"
+                            android:textColor="@color/text_color_main"
+                            android:textSize="16sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/drivers_list_click"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="18dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="-0.02"
+                            android:text="SEE 15 NEW DRIVERS FOR YOUR CAR"
+                            android:textColor="@color/cornflower"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView14"/>
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/changeDriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="-0.02"
+                    android:text="CHANGE"
+                    android:textColor="@color/cornflower"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="21dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/divider_long"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lay"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="35dp"
+                    android:entries="@array/dates_arrays"
+                    android:fontFamily="sans-serif"
+                    android:prompt="@string/date_prompt"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView10"/>
+
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="@dimen/indentation_22"
+
+                    android:layout_height="@dimen/indentation_22"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="22dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner"
+                    app:srcCompat="@drawable/ic_cash"/>
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="-0.01"
+                    android:text="Money earned:"
+                    android:textColor="@color/text_color_main"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner"
+                    tools:ignore="MissingConstraints"/>
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="23dp"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="-0.01"
+                    android:text="₦32000"
+                    android:textColor="@color/text_color_main"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner"/>
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="22dp"
+
+                    android:layout_height="22dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                    app:srcCompat="@drawable/ic_my_trips_copy"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="-0.01"
+                    android:text="Trips made:"
+                    android:textColor="@color/text_color_main"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"/>
+
+                <TextView
+                    android:id="@+id/tripsMade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="-0.01"
+                    android:text="20"
+                    android:textColor="@color/text_color_main"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/money"
+                    app:layout_constraintTop_toTopOf="@+id/textView19"/>
+
+                <TextView
+                    android:id="@+id/allTripsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="40dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="-0.02"
+                    android:text="SHOW ALL TRIPS"
+                    android:textColor="@color/cornflower"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView8"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="end"
+            android:letterSpacing="-0.01"
+            android:text="Day by day earnings graphic"
+            android:textColor="@color/text_color_main"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"/>
+
+        <ImageView
+            android:id="@+id/delete_menu"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/vertical_dots_short"/>
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/location_iv"
+            app:layout_constraintEnd_toEndOf="@+id/driverPhotoDetails1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/driverPhotoDetails1"
+            app:layout_constraintTop_toTopOf="@+id/driverPhotoDetails1"
+            app:layout_constraintVertical_bias="0.867"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/not_on_trip"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:minWidth="50dp"
+            android:minHeight="50dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/month_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:textColor="@color/cornflower"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/nextIcon"
+            app:layout_constraintStart_toEndOf="@+id/prewIcon"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            tools:text="NOVEMBER"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="0dp"
+            android:layout_height="330dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/month_name"/>
+
+        <ImageView
+            android:id="@+id/nextIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="71dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/month_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/month_name"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_copy_2"/>
+
+        <ImageView
+            android:id="@+id/prewIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="71dp"
+            android:rotation="180"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/month_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/month_name"
+            app:srcCompat="@drawable/ic_keyboard_arrow_right_copy_2"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

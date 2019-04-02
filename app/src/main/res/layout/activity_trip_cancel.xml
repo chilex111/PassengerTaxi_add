@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:title="@string/cancel_screen_title"
+            app:collapseIcon="@drawable/ic_close" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/txt_reason_title"
+                android:textSize="16sp"
+                android:fontFamily="@string/medium"
+                android:textColor="@color/dark_grey"
+                android:letterSpacing="0.04"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tableView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="23dp"
+                app:layout_constraintTop_toBottomOf="@id/textView"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="250"
+                app:hintTextAppearance="@style/StyleInputLayout"
+                app:counterOverflowTextAppearance="@style/ThemeInputLayoutCounter"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tableView">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/txt_reason"
+                    style="@style/StyleEditText"
+                    android:theme="@style/AppTheme.ThemeEditTextAppearance"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/answerButton"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="33dp"
+                android:onClick="cancelAnswer"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+                android:enabled="false"
+                android:textColor="@color/colorWhite"
+                android:elevation="@dimen/indentation_4"
+                app:backgroundTint="@color/button_selector_purple"
+                android:text="@string/btn_answer" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

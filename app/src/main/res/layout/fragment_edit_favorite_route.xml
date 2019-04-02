@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_addresses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/indentation_20"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/dottedLineView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/indentation_4"
+                android:layout_below="@id/cardTabWallet"
+                android:layout_marginTop="@dimen/indentation_18"
+                android:layerType="software"
+                android:src="@drawable/dotted_line"
+                app:layout_constraintTop_toBottomOf="@id/rv_addresses"
+                tools:ignore="contentDescription" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_search_results"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="17dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dottedLineView" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group_under_suggest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="dottedLineView2,btn_add_work,btn_add_home,btn_destination_later,btn_my_favorite,btn_set_pin" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/BottomButton"
+        android:text="@string/txt_save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

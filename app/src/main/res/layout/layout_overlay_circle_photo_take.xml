@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<View
+		android:id="@+id/frameCircle"
+		android:layout_width="@dimen/photo_frame_circle_width"
+		android:layout_height="@dimen/photo_frame_circle_height"
+		android:layout_marginTop="@dimen/indentation_20"
+		android:background="@drawable/photo_frame_circle"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+
+	<View
+		android:id="@+id/frameCircleDottedLine"
+		android:layout_width="@dimen/photo_frame_circle_line_width"
+		android:layout_height="@dimen/photo_frame_circle_line_height"
+		android:background="@drawable/frame_circle_stroke"
+		app:layout_constraintEnd_toEndOf="@+id/frameCircle"
+		app:layout_constraintStart_toStartOf="@+id/frameCircle"
+		app:layout_constraintBottom_toBottomOf="@id/frameCircle"
+		app:layout_constraintTop_toTopOf="@id/frameCircle"/>
+
+	<View
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@color/black_67"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/frameCircle"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<View
+		android:id="@+id/view"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@color/black_67"
+		app:layout_constraintBottom_toTopOf="@id/frameCircle"
+		app:layout_constraintEnd_toEndOf="@id/frameCircle"
+		app:layout_constraintStart_toStartOf="@id/frameCircle"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<View
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@color/black_67"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/frameCircle"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<View
+		android:id="@+id/view2"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:background="@color/black_67"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="@id/frameCircle"
+		app:layout_constraintStart_toStartOf="@id/frameCircle"
+		app:layout_constraintTop_toBottomOf="@id/frameCircle"/>
+
+	<TextView
+		android:id="@+id/txtCameraScreenTitle"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="@dimen/indentation_46"
+		android:layout_marginStart="@dimen/indentation_46"
+		android:layout_marginBottom="@dimen/indentation_26"
+		android:fontFamily="sans-serif-medium"
+		android:letterSpacing="-0.01"
+		android:text="@string/txt_camera_screen_car_photo"
+		android:textColor="#ffffff"
+		android:textSize="16sp"
+		android:textStyle="normal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/frameCircle"/>
+
+	<android.support.v7.widget.AppCompatImageView
+		android:id="@+id/icCloseOverlayCircleTakePhoto"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/indentation_16"
+		android:padding="@dimen/indentation_6"
+		android:src="@drawable/ic_close_white"
+		app:layout_constraintBottom_toBottomOf="@id/txtSaveCameraScreen"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

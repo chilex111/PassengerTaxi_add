@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_where_to"
+       app:layout_constraintTop_toTopOf="parent" >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="-0.01"
+                android:textColor="@color/light_grey_blue"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:text="28.02.18"
+                android:layout_marginTop="@dimen/indentation_10"
+                android:layout_marginStart="@dimen/indentation_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="-0.01"
+                android:textColor="@color/light_grey_blue"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:text="5:50-6:10 pm"
+                android:layout_marginStart="@dimen/indentation_16"
+                app:layout_constraintStart_toEndOf="@id/dateTextView"
+                app:layout_constraintTop_toTopOf="@id/dateTextView"
+                />
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textColor="@color/black_87"
+                android:letterSpacing="-0.01"
+                tools:text="₦2200-2440"
+                android:layout_marginEnd="@dimen/indentation_6"
+                app:layout_constraintTop_toTopOf="@id/dateTextView"
+                app:layout_constraintEnd_toStartOf="@id/cardImageView"
+                />
+
+            <ImageView
+                android:id="@+id/cardImageView"
+                android:layout_width="@dimen/indentation_24"
+                android:layout_height="@dimen/indentation_24"
+                app:srcCompat="@drawable/ic_card"
+                app:layout_constraintTop_toTopOf="@id/priceTextView"
+                app:layout_constraintBottom_toBottomOf="@id/priceTextView"
+                android:layout_marginEnd="@dimen/indentation_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/dottedLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/divider_dots_the_shortest"
+                android:layout_marginStart="@dimen/indentation_22"
+                android:layout_marginEnd="@dimen/indentation_22"
+                android:layout_marginTop="@dimen/indentation_18"
+                app:layout_constraintTop_toBottomOf="@id/dateTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/app_name"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tableView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/indentation_16"
+                app:layout_constraintStart_toStartOf="@id/dateTextView"
+                app:layout_constraintEnd_toEndOf="@id/cardImageView"
+                app:layout_constraintTop_toBottomOf="@id/dottedLine"
+                />
+
+            <ImageView
+                android:id="@+id/dottedLine2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/divider_dots_the_shortest"
+                android:layout_marginTop="@dimen/indentation_20"
+                app:layout_constraintStart_toStartOf="@id/dottedLine"
+                app:layout_constraintEnd_toEndOf="@id/dottedLine"
+                app:layout_constraintTop_toBottomOf="@id/tableView"
+                android:contentDescription="@string/app_name" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@string/medium"
+                android:textColor="@color/cornflower"
+                android:letterSpacing="0.04"
+                android:text="@string/btn_cancel"
+                android:layout_marginEnd="@dimen/indentation_20"
+                android:background="@color/transparent"
+                app:layout_constraintTop_toTopOf="@id/editButton"
+                app:layout_constraintEnd_toStartOf="@id/editButton"
+                />
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@string/medium"
+                android:textColor="@color/cornflower"
+                android:letterSpacing="0.04"
+                android:text="@string/btn_edit_time"
+                android:background="@color/transparent"
+                android:layout_marginEnd="@dimen/indentation_26"
+                android:layout_marginTop="@dimen/indentation_10"
+                android:layout_marginBottom="@dimen/indentation_10"
+                app:layout_constraintTop_toBottomOf="@id/dottedLine2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

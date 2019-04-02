@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/indentation_10"
+        android:layout_marginTop="@dimen/indentation_12"
+        android:padding="@dimen/indentation_10"
+        android:src="@drawable/ic_close"
+        android:tint="#A7ADB8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="contentDescription"/>
+
+    <TextView
+        android:id="@+id/tv_trip_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/indentation_10"
+        android:layout_marginTop="@dimen/indentation_14"
+        android:fontFamily="@string/medium"
+        android:text="@string/txt_trip_cost"
+        android:textColor="@color/text_color_main"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintStart_toEndOf="@id/iv_close"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProxPrice"
+        android:layout_width="0dp"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/indentation_8"
+        android:layout_marginEnd="@dimen/indentation_16"
+        tools:text="₦1000.50-1200.80"
+        android:textColor="@color/text_color_main"
+        android:textSize="@dimen/text_size_20"
+        android:gravity="end"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_trip_cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/tv_trip_cost"
+        app:layout_constraintTop_toTopOf="@id/tv_trip_cost" />
+
+    <ImageView
+        android:id="@+id/dottedLineView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/indentation_4"
+        android:layout_below="@id/cardTabWallet"
+        android:layout_marginTop="@dimen/indentation_16"
+        android:layerType="software"
+        android:src="@drawable/dotted_line"
+        app:layout_constraintTop_toBottomOf="@id/tvProxPrice"
+        tools:ignore="contentDescription" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <ImageView
+        android:id="@+id/ivCarType"
+        android:layout_width="@dimen/indentation_60"
+        android:layout_height="@dimen/indentation_60"
+        android:layout_marginStart="@dimen/indentation_8"
+        android:layout_marginTop="@dimen/indentation_10"
+        android:layout_marginEnd="@dimen/indentation_8"
+        android:padding="@dimen/indentation_8"
+        android:src="@drawable/ic_car_type_standard"
+        app:layout_constraintEnd_toStartOf="@id/guideline_start"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/dottedLineView"
+        tools:ignore="contentDescription"/>
+
+    <TextView
+        android:id="@+id/tvCarType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Standard car"
+        android:fontFamily="@string/medium"
+        android:textColor="@color/text_color_main"
+        app:layout_constraintEnd_toEndOf="@+id/ivCarType"
+        app:layout_constraintStart_toStartOf="@+id/ivCarType"
+        app:layout_constraintTop_toBottomOf="@id/ivCarType" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/ivTime"
+        android:layout_width="@dimen/indentation_60"
+        android:layout_height="@dimen/indentation_60"
+        android:layout_marginStart="@dimen/indentation_8"
+        android:layout_marginTop="@dimen/indentation_10"
+        android:layout_marginEnd="@dimen/indentation_8"
+        android:padding="@dimen/indentation_8"
+        android:src="@drawable/ic_choose_time"
+        app:layout_constraintEnd_toStartOf="@id/guideline_middle"
+        app:layout_constraintStart_toStartOf="@id/guideline_middle"
+        app:layout_constraintTop_toBottomOf="@+id/dottedLineView"
+        tools:ignore="contentDescription"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/now"
+        app:layout_constraintEnd_toEndOf="@+id/ivTime"
+        android:fontFamily="@string/medium"
+        android:textColor="@color/text_color_main"
+        app:layout_constraintStart_toStartOf="@+id/ivTime"
+        app:layout_constraintTop_toBottomOf="@id/ivTime" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/ivCard"
+        android:layout_width="@dimen/indentation_60"
+        android:layout_height="@dimen/indentation_60"
+        android:layout_marginStart="@dimen/indentation_8"
+        android:layout_marginTop="@dimen/indentation_10"
+        android:layout_marginEnd="@dimen/indentation_8"
+        android:padding="@dimen/indentation_8"
+        android:src="@drawable/ic_payment_method"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@+id/dottedLineView"
+        tools:ignore="contentDescription"/>
+
+    <TextView
+        android:id="@+id/tvCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/medium"
+        tools:text="**077"
+        android:textColor="@color/text_color_main"
+        app:layout_constraintEnd_toEndOf="@+id/ivCard"
+        app:layout_constraintStart_toStartOf="@+id/ivCard"
+        app:layout_constraintTop_toBottomOf="@id/ivCard" />
+
+    <ImageView
+        android:id="@+id/ivLeaveNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/indentation_30"
+        android:layout_marginEnd="@dimen/indentation_10"
+        android:padding="@dimen/indentation_4"
+        android:src="@drawable/ic_arrow_to_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCarType"
+        tools:ignore="contentDescription"/>
+
+    <TextView
+        android:id="@+id/tvLeaveNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/indentation_16"
+        android:layout_marginTop="@dimen/indentation_30"
+        android:layout_marginEnd="@dimen/indentation_3"
+        android:padding="@dimen/indentation_6"
+        android:fontFamily="@string/medium"
+        android:textColor="@color/text_color_secondary"
+        android:text="@string/leave_not_for_driver"
+        app:layout_constraintEnd_toStartOf="@+id/ivLeaveNote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCarType" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/BottomButtonDark"
+        android:text="@string/txt_button_next"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLeaveNote" />
+
+
+</android.support.constraint.ConstraintLayout>

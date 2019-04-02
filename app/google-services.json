@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "134436292261",
+    "firebase_url": "https://omega-rhino-207110.firebaseio.com",
+    "project_id": "omega-rhino-207110",
+    "storage_bucket": "omega-rhino-207110.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134436292261:android:6b205fad12c5f8f1",
+        "android_client_info": {
+          "package_name": "com.kross.taxi_passenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134436292261-l8virhij4e35s1q3qet9060460vfcrm3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw7zDF_EUnORvI48l_k6ZbdnJucShNaUM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134436292261:android:672f1d8ec81d301a",
+        "android_client_info": {
+          "package_name": "com.test.client_taxi_kross_driver_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134436292261-0ndhbmmjpp5ucvued4qsg357tg0e2qik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.test.client_taxi_kross_driver_android",
+            "certificate_hash": "d92c3f08ea68ade4a1c2a56ed35b7790a1c295b6"
+          }
+        },
+        {
+          "client_id": "134436292261-l8virhij4e35s1q3qet9060460vfcrm3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw7zDF_EUnORvI48l_k6ZbdnJucShNaUM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134436292261-l8virhij4e35s1q3qet9060460vfcrm3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

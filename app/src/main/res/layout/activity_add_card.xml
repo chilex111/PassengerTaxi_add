@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:collapseIcon="@drawable/ic_back_black" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtAddCardScreenTitle"
+                style="@style/TxtStyleTitle"
+                android:layout_marginStart="@dimen/indentation_20"
+                android:layout_marginTop="@dimen/indentation_16"
+                android:layout_marginEnd="@dimen/indentation_20"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:text="@string/txt_add_card_screen_title" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/indentation_320"
+                android:layout_marginStart="@dimen/indentation_12"
+                android:layout_marginTop="@dimen/indentation_20"
+                android:layout_marginEnd="@dimen/indentation_12"
+                android:background="@drawable/ic_cards">
+
+                <TextView
+                    android:id="@+id/txtAddCardScreenName"
+                    style="@style/TxtStyleSmall"
+                    android:layout_marginStart="@dimen/indentation_34"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/txt_add_card_screen_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editAddCardName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/indentation_40"
+                    android:layout_marginStart="@dimen/indentation_34"
+                    android:layout_marginTop="@dimen/indentation_4"
+                    android:layout_marginEnd="@dimen/indentation_80"
+                    android:background="@drawable/text_view_corner_background"
+                    android:hint="@string/txt_add_card_name_hint"
+                    android:imeOptions="actionDone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/indentation_10"
+                    android:paddingStart="@dimen/indentation_10"
+                    android:textSize="@dimen/text_size_12"
+                    android:theme="@style/AppTheme.ThemeEditTextAppearance"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAddCardScreenName"
+                    tools:layout_editor_absoluteX="34dp" />
+
+                <TextView
+                    android:id="@+id/txtAddCardScreenNumber"
+                    style="@style/TxtStyleSmall"
+                    android:layout_marginStart="@dimen/indentation_34"
+                    android:layout_marginTop="@dimen/indentation_8"
+                    android:text="@string/txt_add_card_screen_number"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/editAddCardName" />
+
+                <EditText
+                    android:id="@+id/editAddCarNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/indentation_40"
+                    android:layout_marginStart="@dimen/indentation_34"
+                    android:layout_marginTop="@dimen/indentation_4"
+                    android:layout_marginEnd="@dimen/indentation_80"
+                    android:background="@drawable/text_view_corner_background"
+                    android:digits="0123456789 ."
+                    android:hint="@string/txt_add_card_number_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="@integer/card_number_max_length"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/indentation_10"
+                    android:paddingEnd="@dimen/indentation_10"
+                    android:textSize="@dimen/text_size_12"
+                    android:theme="@style/AppTheme.ThemeEditTextAppearance"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAddCardScreenNumber" />
+
+                <TextView
+                    android:id="@+id/txtAddCardScreenDate"
+                    style="@style/TxtStyleSmall"
+                    android:layout_marginStart="@dimen/indentation_34"
+                    android:layout_marginTop="@dimen/indentation_8"
+                    android:text="@string/txt_add_card_screen_date"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/editAddCarNumber" />
+
+                <EditText
+                    android:id="@+id/editAddCardDate"
+                    android:layout_width="@dimen/indentation_80"
+                    android:layout_height="@dimen/indentation_40"
+                    android:layout_marginStart="@dimen/indentation_34"
+                    android:layout_marginTop="@dimen/indentation_4"
+                    android:layout_marginEnd="@dimen/indentation_80"
+                    android:background="@drawable/text_view_corner_background"
+                    android:digits="0123456789 /."
+                    android:hint="@string/txt_add_car_date_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="date"
+                    android:maxLength="@integer/card_date_max_length"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/indentation_10"
+                    android:paddingEnd="@dimen/indentation_10"
+                    android:textSize="@dimen/text_size_12"
+                    android:theme="@style/AppTheme.ThemeEditTextAppearance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAddCardScreenDate" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintGuide_percent="0.75"
+                    android:orientation="horizontal"/>
+                <TextView
+                    android:id="@+id/txtAddCardScreenCvv"
+                    style="@style/TxtStyleSmall"
+                    android:layout_marginEnd="@dimen/indentation_30"
+                    android:text="@string/txt_add_card_cvv"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/guide"
+                    app:layout_constraintStart_toStartOf="@id/editAddCardCvv" />
+
+                <EditText
+                    android:id="@+id/editAddCardCvv"
+                    android:layout_width="@dimen/indentation_80"
+                    android:layout_height="@dimen/indentation_40"
+                    android:layout_marginTop="@dimen/indentation_4"
+                    android:layout_marginEnd="@dimen/indentation_30"
+                    android:layout_marginBottom="@dimen/indentation_16"
+                    android:background="@drawable/text_view_corner_background"
+                    android:hint="@string/txt_add_card_cvv_hint"
+                    android:inputType="number"
+                    android:maxLength="@integer/card_cvv_max_length"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/indentation_10"
+                    android:paddingEnd="@dimen/indentation_10"
+                    android:textSize="@dimen/text_size_12"
+                    android:theme="@style/AppTheme.ThemeEditTextAppearance"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtSkipAddCardScreen"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="@dimen/indentation_16"
+                android:text="@string/txt_skip"
+                android:textColor="@color/text_view_selectable_purple"
+                android:textSize="@dimen/text_size_18" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

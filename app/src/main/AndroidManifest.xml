@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kross.taxi_passenger">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".KrossApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_logo"
+        android:supportsRtl="false"
+        android:testOnly="false"
+        android:theme="@style/AppTheme">
+        <activity android:name=".presentation.screen.cabinet.support.ComplaintsActivity"></activity>
+        <activity android:name=".presentation.screen.cabinet.support.SupportActivity" />
+        <activity android:name=".presentation.screen.cabinet.faq.FAQActivity" />
+        <activity android:name=".presentation.screen.cabinet.news.ReadMoreActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/facebook_app_client_token" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a48c731393ac70de078dd8d9127c9ebe9be49d5e" /> <!-- <data -->
+        <!-- android:host="https://api-dev.kross.taxi/api/v1" -->
+        <!-- android:pathPrefix="/api-dev.kross.taxi" -->
+        <!-- android:scheme="https"/> -->
+        <!-- <data -->
+        <!-- android:host="api-dev.kross.taxi/api/v1" -->
+        <!-- android:scheme="api-dev.kross.taxi"/> -->
+        <activity
+            android:name=".presentation.screen.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Launch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.screen.onboarding.OnboardingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ThemeTransparentStatusBar" />
+        <activity
+            android:name=".presentation.screen.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name="com.facebook.accountkit.ui.AccountKitActivity"
+            android:theme="@style/AppLoginTheme"
+            tools:replace="android:theme" />
+        <activity
+            android:name=".presentation.screen.authorization.AuthorizationActivity"
+            android:label="@string/txt_auth_screen_label_authorization"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.screen.registration.RegistrationActivity"
+            android:label="@string/txt_registration_toolbar_title"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.screen.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ThemeTransparentStatusBar" />
+        <activity
+            android:name=".presentation.screen.driver_rate.DriverRateActivity"
+            android:label="@string/label_title_rate_driver"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.screen.add_card.AddCardActivity"
+            android:label="@string/txt_add_cars_screen_toolbar_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.screen.trip_finished_help.HelpActivity"
+            android:label="@string/label_help_screen_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.trip_finished_help.HelpDescriptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.one_more_trip.OneMoreTripActivity"
+            android:label="@string/label_screen_title_one_more_trip"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".presentation.screen.cabinet.CabinetActivity"
+            android:label="@string/txt_cabinet_screen_toolbar_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.cabinet.ChangePasswordActivity"
+            android:label="@string/title_change_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.waypoints.WaypointsActivity"
+            android:label="Waypoints"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".presentation.screen.payment.choose.ChoosePaymentActivity"
+            android:label="@string/payment_methods"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".presentation.screen.payment.mycards.MyCardsActivity"
+            android:label="@string/my_cards"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".presentation.screen.favorite.FavoriteActivity"
+            android:label="@string/my_favorite"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.screen.time_trip.SetTimeTripActivity"
+            android:label="@string/txt_label_time_trip"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".presentation.screen.leave_note_and_passenger_number.NoteAndNumberActivity"
+            android:label="@string/txt_label_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".presentation.screen.cabinet.wallet.WalletActivity"
+            android:label="@string/txt_my_wallet_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.cabinet.wallet.AddBankAccountActivity"
+            android:label="@string/txt_bank_account_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.cabinet.wallet.BankListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.cabinet.wallet.TextDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.cabinet.wallet.TransferRequestActivity"
+            android:label="@string/txt_transfer_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.trip_details.TripDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".presentation.screen.cancel_trip.CancelTripActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".presentation.screen.become_car_owner.BecomeOwnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.car_owner_registration.CarOwnerRegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.choose_car_make_model.ChooseCarModelMakeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.camera.CameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FuullScreen" />
+        <activity
+            android:name=".presentation.screen.cars_list.CarsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.verification_waiting.VerificationWaitingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.add_car_activity.AddCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.car_details_screen.CarDetailsScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".presentation.screen.car_location.CarLocationActivity" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            +
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/facebook_app_client_token" />
+
+        <activity
+            android:name=".presentation.screen.cabinet.trips.MyTripsActivity"
+            android:label="@string/title_my_trips"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.screen.cabinet.about.AboutAppActivity"
+            android:label="@string/title_about_app"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.trip_finished.TripFinishedActivity"
+            android:label="@string/title_about_app"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".presentation.screen.cabinet.news.NewsActivity"
+            android:label="@string/title_about_app"
+            android:screenOrientation="portrait" />
+        <activity android:name=".presentation.screen.cabinet.edit_profile.EditProfileActivity" />
+        <activity android:name=".presentation.screen.cabinet.edit_profile.personal_data.PersonalDataActivity" />
+        <activity
+            android:name=".presentation.screen.drivers_list.DriversListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.driver_details.DriverDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.screen.all_trips_list_screen.AllTripsListScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".presentation.screen.waypoints.address_by_pin.AddressByMapPinActivity" />
+        <activity android:name=".presentation.screen.notifications.NotificationsListActivity" />
+        <activity android:name=".presentation.screen.notifications.details.MyCarsNotificationActivity" />
+        <activity android:name=".presentation.screen.notifications.details.TripDetailsNotificationActivity" />
+        <activity android:name=".presentation.screen.notifications.details.CarOwnerNotificationsActivity" />
+    </application>
+
+</manifest>

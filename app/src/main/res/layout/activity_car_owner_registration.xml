@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:descendantFocusability="beforeDescendants"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	android:orientation="vertical"
+	tools:ignore="HardcodedText"
+	tools:context=".presentation.screen.registration.RegistrationActivity">
+
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="23dp"
+					android:fontFamily="sans-serif-medium"
+					android:textColor="@color/text_color_main"
+					android:textSize="16sp"
+					android:textStyle="normal"
+					android:text="To apply you need to fill in these fields:" />
+
+				<ImageView
+					android:id="@+id/profile_photo"
+					android:layout_width="110dp"
+					android:layout_height="110dp"
+					android:layout_gravity="center"
+					android:layout_marginTop="28dp"
+					android:layout_marginBottom="28dp"
+					android:background="@drawable/photo"
+					android:padding="5dp"
+					android:src="@drawable/photo_dummy_cabinet"
+					android:contentDescription="@string/app_name" />
+
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/inputLayoutOwnerName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="@dimen/indentation_16"
+					android:textColorHint="@color/text_color_secondary"
+					app:hintTextAppearance="@style/StyleInputLayout">
+
+					<android.support.design.widget.TextInputEditText
+						android:id="@+id/editOwnerRegistrationName"
+						style="@style/StyleEditText"
+						android:enabled="false"
+						android:hint="First name"
+						android:inputType="text"/>
+				</android.support.design.widget.TextInputLayout>
+
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/inputLayoutOwnerLastName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/indentation_16"
+					android:layout_marginEnd="@dimen/indentation_16"
+					android:textColorHint="@color/text_color_secondary"
+					app:hintTextAppearance="@style/StyleInputLayout">
+
+					<android.support.design.widget.TextInputEditText
+						android:id="@+id/editOwnerRegistrationLastName"
+						style="@style/StyleEditText"
+						android:enabled="false"
+						android:hint="Last name"
+						android:inputType="text"/>
+				</android.support.design.widget.TextInputLayout>
+
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/inputOwnerLayoutEmail"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="@dimen/indentation_16"
+					android:textColorHint="@color/text_color_secondary"
+					app:hintTextAppearance="@style/StyleInputLayout">
+
+					<android.support.design.widget.TextInputEditText
+						android:id="@+id/editOwnerRegistrationEmail"
+						style="@style/StyleEditText"
+						android:enabled="false"
+						android:hint="Email"
+						android:inputType="textEmailAddress"/>
+				</android.support.design.widget.TextInputLayout>
+
+
+				<Button
+					android:id="@+id/mailConfirmBtn"
+					android:layout_width="wrap_content"
+					android:layout_height="36dp"
+					android:layout_gravity="center"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					android:background="@drawable/background_button_corner"
+					android:paddingLeft="36dp"
+					android:paddingRight="36dp"
+					android:shadowColor="#59000000"
+					android:text="@string/verify_my_e_mail"
+					android:textColor="@color/colorWhite"
+					android:textSize="14sp"/>
+
+				<android.support.constraint.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="30dp">
+
+
+					<android.support.design.widget.TextInputLayout
+						android:id="@+id/inputLayoutCountryCode"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_margin="@dimen/indentation_16"
+						android:layout_marginStart="8dp"
+						android:textColorHint="@color/text_color_secondary"
+						app:hintTextAppearance="@style/StyleInputLayout"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent">
+
+					</android.support.design.widget.TextInputLayout>
+
+
+					<android.support.design.widget.TextInputLayout
+						android:id="@+id/inputLayoutOwnerNumber"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_margin="@dimen/indentation_16"
+						android:layout_marginStart="8dp"
+						android:layout_marginEnd="8dp"
+						android:hint="Phone"
+						android:textColorHint="@color/text_color_secondary"
+						app:hintTextAppearance="@style/StyleInputLayout"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/inputLayoutCountryCode"
+						tools:ignore="HardcodedText">
+
+						<android.support.design.widget.TextInputEditText
+							android:id="@+id/editOwnerNumber"
+							style="@style/StyleEditText"
+							android:enabled="false"
+							android:inputType="textEmailAddress"
+							android:text="0985838375 "/>
+					</android.support.design.widget.TextInputLayout>
+				</android.support.constraint.ConstraintLayout>
+
+				<TextView
+					android:id="@+id/addCarInfoTV"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="28dp"
+					android:letterSpacing="-0.01"
+					android:text="@string/car_information"
+					android:textColor="@color/text_color_main"
+					android:textSize="18sp"
+					android:textStyle="normal"
+					/>
+
+				<TextView
+					android:id="@+id/addCarMake"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="30dp"
+					android:letterSpacing="-0.02"
+					android:text="@string/choose_car_make"
+					android:textColor="@color/cornflower"
+					android:textSize="16sp"
+					android:textStyle="normal"
+					/>
+
+				<TextView
+					android:id="@+id/addCarModel"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="28dp"
+					android:letterSpacing="-0.02"
+					android:text="@string/choose_car_model"
+					android:textColor="@color/cornflower"
+					android:textSize="16sp"
+					android:textStyle="normal"
+					/>
+
+				<android.support.design.widget.TextInputLayout
+					android:id="@+id/inputLayoutPlateNumber"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/indentation_16"
+					android:layout_marginTop="28dp"
+					android:layout_marginEnd="@dimen/indentation_16"
+					android:textColorHint="@color/text_color_secondary"
+					app:hintTextAppearance="@style/StyleInputLayout">
+
+					<android.support.design.widget.TextInputEditText
+						android:id="@+id/editPlateNumber"
+						style="@style/StyleEditText"
+						android:hint="@string/enter_license_plate_number"
+						android:inputType="text"/>
+				</android.support.design.widget.TextInputLayout>
+
+				<android.support.constraint.ConstraintLayout
+					android:id="@+id/carPhotoLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="16dp"
+					android:visibility="gone">
+
+					<TextView
+						android:id="@+id/textView5"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:layout_marginTop="16dp"
+						android:fontFamily="sans-serif"
+						android:letterSpacing="-0.02"
+						android:text="Car photo added"
+						android:textColor="@color/text_color_main"
+						android:textSize="16sp"
+						android:textStyle="normal"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:layout_marginTop="27dp"
+						android:layout_marginEnd="8dp"
+						android:orientation="horizontal"
+						android:weightSum="4"
+						app:layout_constraintEnd_toStartOf="@+id/deleteCarPhoto"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+						<ImageView
+							android:id="@+id/driverPhotoDetails"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:src="@drawable/kross_logo"
+							android:contentDescription="@string/app_name" />
+
+						<TextView
+							android:id="@+id/file_name"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="16dp"
+							android:layout_weight="3"
+							android:fontFamily="sans-serif"
+							android:letterSpacing="-0.01"
+							android:textColor="@color/black_87"
+							android:textSize="12sp"
+							android:textStyle="normal"
+							tools:text="V456ghw456l4kr…245refe.jpeg"
+							/>
+					</LinearLayout>
+
+					<ImageView
+						android:id="@+id/deleteCarPhoto"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="27dp"
+						android:layout_marginEnd="16dp"
+						android:src="@drawable/ic_close"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView5"
+						android:contentDescription="@string/app_name" />
+				</android.support.constraint.ConstraintLayout>
+
+				<android.support.constraint.ConstraintLayout
+					android:id="@+id/layoutAddCarPhoto"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="30dp">
+
+					<ImageView
+						android:id="@+id/addCarPhotoBtn"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:src="@drawable/plus"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						android:contentDescription="@string/app_name" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:fontFamily="sans-serif"
+						android:letterSpacing="-0.02"
+						android:text="@string/add_a_car_photo"
+						android:textColor="@color/text_color_main"
+						android:textSize="14sp"
+						android:textStyle="normal"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintStart_toEndOf="@+id/addCarPhotoBtn"
+						app:layout_constraintTop_toTopOf="parent"/>
+
+				</android.support.constraint.ConstraintLayout>
+
+				<android.support.constraint.ConstraintLayout
+					android:id="@+id/proofOwnershipLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="16dp"
+					android:visibility="gone">
+
+					<TextView
+						android:id="@+id/textView6"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:layout_marginTop="16dp"
+						android:fontFamily="sans-serif"
+						android:letterSpacing="-0.02"
+						android:text="Proof of ownership added"
+						android:textColor="@color/text_color_main"
+						android:textSize="16sp"
+						android:textStyle="normal"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:layout_marginTop="27dp"
+						android:layout_marginEnd="8dp"
+						android:orientation="horizontal"
+						android:weightSum="4"
+						app:layout_constraintEnd_toStartOf="@+id/deleteProofPhoto"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+						<ImageView
+							android:id="@+id/proofImage"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:src="@drawable/kross_logo"
+							android:contentDescription="@string/app_name" />
+
+						<TextView
+							android:id="@+id/proof_file_name"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="16dp"
+							android:layout_weight="3"
+							android:fontFamily="sans-serif"
+							android:letterSpacing="-0.01"
+							android:textColor="@color/black_87"
+							android:textSize="12sp"
+							android:textStyle="normal"
+							tools:text="V456ghw456l4kr…245refe.jpeg"
+							/>
+					</LinearLayout>
+
+					<ImageView
+						android:id="@+id/deleteProofPhoto"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="27dp"
+						android:layout_marginEnd="16dp"
+						android:src="@drawable/ic_close"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView6"
+						android:contentDescription="@string/app_name" />
+				</android.support.constraint.ConstraintLayout>
+
+
+				<android.support.constraint.ConstraintLayout
+					android:id="@+id/layoutProofOwnership"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="30dp">
+
+					<ImageView
+						android:id="@+id/addProofOwnership"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:src="@drawable/plus"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						android:contentDescription="@string/app_name" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:fontFamily="sans-serif"
+						android:letterSpacing="-0.02"
+						android:text="@string/add_a_proof_of_ownership"
+						android:textColor="@color/text_color_main"
+						android:textSize="14sp"
+						android:textStyle="normal"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintStart_toEndOf="@+id/addProofOwnership"
+						app:layout_constraintTop_toTopOf="parent"/>
+
+				</android.support.constraint.ConstraintLayout>
+
+				<android.support.constraint.ConstraintLayout
+					android:id="@+id/insuranceLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="16dp"
+					android:layout_marginBottom="16dp"
+					android:visibility="gone">
+
+					<TextView
+						android:id="@+id/textView7"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:layout_marginTop="16dp"
+						android:fontFamily="sans-serif"
+						android:letterSpacing="-0.02"
+						android:text="@string/car_insurance_added"
+						android:textColor="@color/text_color_main"
+						android:textSize="16sp"
+						android:textStyle="normal"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:layout_marginTop="27dp"
+						android:layout_marginEnd="8dp"
+						android:orientation="horizontal"
+						android:weightSum="4"
+						app:layout_constraintEnd_toStartOf="@+id/deleteInsurancePhoto"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+						<ImageView
+							android:id="@+id/insuranceImage"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:src="@drawable/kross_logo"
+							android:contentDescription="@string/app_name" />
+
+						<TextView
+							android:id="@+id/insurance_file_name"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_marginStart="16dp"
+							android:layout_weight="3"
+							android:fontFamily="sans-serif"
+							android:letterSpacing="-0.01"
+							android:text="V456ghw456l4kr…245refe.jpeg"
+							android:textColor="@color/black_87"
+							android:textSize="12sp"
+							android:textStyle="normal"
+							/>
+					</LinearLayout>
+
+					<ImageView
+						android:id="@+id/deleteInsurancePhoto"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="27dp"
+						android:layout_marginEnd="16dp"
+						android:src="@drawable/ic_close"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView7"
+						android:contentDescription="@string/app_name" />
+				</android.support.constraint.ConstraintLayout>
+
+				<android.support.constraint.ConstraintLayout
+					android:id="@+id/layoutInsurance"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="30dp"
+					android:layout_marginBottom="30dp">
+
+					<ImageView
+						android:id="@+id/addInsurance"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:src="@drawable/plus"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						android:contentDescription="@string/app_name" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:fontFamily="sans-serif"
+						android:letterSpacing="-0.02"
+						android:text="@string/add_an_insurance"
+						android:textColor="@color/text_color_main"
+						android:textSize="14sp"
+						android:textStyle="normal"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintStart_toEndOf="@+id/addInsurance"
+						app:layout_constraintTop_toTopOf="parent"/>
+
+				</android.support.constraint.ConstraintLayout>
+			</LinearLayout>
+
+
+			<include
+				android:id="@+id/progressBarRegistration"
+				layout="@layout/layout_progress_bar"/>
+
+
+		</FrameLayout>
+
+	</android.support.v4.widget.NestedScrollView>
+
+	<Button
+		android:id="@+id/btnApplyVerification"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:background="@drawable/button_selector"
+		android:enabled="false"
+		android:text="@string/apply_for_verification"
+		android:textColor="@android:color/white"
+		android:textSize="@dimen/text_size_14"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+
+</LinearLayout>

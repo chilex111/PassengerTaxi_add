@@ -1,0 +1,34 @@
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/greyish_brown">
+
+	<android.support.v7.widget.AppCompatImageView
+		android:id="@+id/iClosePhotoPermissionDenied"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/indentation_16"
+		android:padding="@dimen/indentation_6"
+		android:src="@drawable/ic_close_white"/>
+
+	<ImageView
+		android:id="@+id/ivFrameLayoutPermissionDenied"
+		android:layout_width="@dimen/photo_frame_width"
+		android:layout_height="@dimen/photo_frame_height"
+		android:background="@drawable/photo_frame"
+		android:layout_gravity="center"
+		tools:ignore="contentDescription"/>
+
+	<Button
+		android:id="@+id/btbAllowPermissionCamera"
+		android:layout_width="@dimen/indentation_266"
+		android:layout_height="@dimen/indentation_46"
+		android:layout_marginBottom="@dimen/indentation_78"
+		android:backgroundTint="@color/colorWhite"
+		android:text="@string/txt_button_camera_screen_allow_permission"
+		android:layout_gravity="bottom|center_horizontal"/>
+
+</FrameLayout>

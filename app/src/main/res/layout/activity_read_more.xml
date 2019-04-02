@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.screen.cabinet.news.ReadMoreActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/indentation_240"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="@dimen/indentation_20"
+        android:layout_marginEnd="4dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name" />
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/indentation_16"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@string/medium"
+        android:gravity="start"
+        android:letterSpacing="-0.01"
+        android:textColor="@color/text_color_main"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:text="Premium cars in TaxiAfrica"/>
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/divider_dots_the_shortest"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:contentDescription="@string/app_name" />
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:letterSpacing="-0.01"
+        android:padding="@dimen/indentation_4"
+        android:textColor="@color/text_color_secondary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView5"
+        app:layout_constraintBottom_toTopOf="@id/pubDateTv"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco… "/>
+
+    <TextView
+        android:id="@+id/pubDateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/indentation_16"
+        android:letterSpacing="-0.01"
+        android:textStyle="bold"
+        android:textColor="@color/light_grey_blue"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="28.02.18"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

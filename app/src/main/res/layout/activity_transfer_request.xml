@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/text_color_main"
+        android:letterSpacing="-0.01"
+        android:text="@string/txt_transfer_details_title"
+        android:layout_margin="@dimen/indentation_30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/indentation_18"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/inputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_transfer_hint"
+            android:inputType="numberDecimal"
+            style="@style/StyleEditText"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="#c9ef5769"
+        android:letterSpacing="-0.02"
+        android:alpha="0"
+        android:layout_marginStart="@dimen/indentation_4"
+        android:text="@string/txt_transfer_error"
+        app:layout_constraintTop_toBottomOf="@id/inputLayout"
+        app:layout_constraintStart_toStartOf="@id/inputLayout"
+        app:layout_constraintEnd_toEndOf="@id/inputLayout"
+        />
+
+    <TextView
+        android:id="@+id/courseTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="@color/text_color_secondary"
+        android:letterSpacing="-0.01"
+        android:text="@string/txt_transfer_converted"
+        android:layout_marginEnd="@dimen/indentation_10"
+        android:layout_marginTop="@dimen/indentation_10"
+        app:layout_constraintTop_toBottomOf="@id/errorTextView"
+        app:layout_constraintStart_toStartOf="@id/errorTextView"
+        app:layout_constraintEnd_toStartOf="@id/amountTextView"
+        />
+
+    <TextView
+        android:id="@+id/amountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="@color/text_color_secondary"
+        android:letterSpacing="-0.01"
+        android:text="@string/txt_transfer_left"
+        app:layout_constraintTop_toBottomOf="@id/errorTextView"
+        app:layout_constraintEnd_toEndOf="@id/inputLayout"
+        app:layout_constraintTop_toTopOf="@id/courseTextView"
+        />
+
+    <Button
+        android:id="@+id/requestButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/txt_transfer_button_title"
+        android:background="@drawable/button_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="requestBonuses"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/frame"
+        android:layout_width="@dimen/photo_frame_width"
+        android:layout_height="@dimen/photo_frame_height"
+        android:background="@drawable/photo_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/frame"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/black_67"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black_67"
+        app:layout_constraintBottom_toTopOf="@id/frame"
+        app:layout_constraintEnd_toEndOf="@id/frame"
+        app:layout_constraintStart_toStartOf="@id/frame"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black_67"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/frame"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black_67"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/frame"
+        app:layout_constraintStart_toStartOf="@id/frame"
+        app:layout_constraintTop_toBottomOf="@id/frame" />
+
+    <TextView
+        android:id="@+id/txtCameraScreenTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/indentation_46"
+        android:layout_marginStart="@dimen/indentation_46"
+        android:layout_marginBottom="@dimen/indentation_24"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="-0.01"
+        android:text="@string/txt_camera_screen_picture_frame"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/frame"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/icCloseOverlayTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/indentation_16"
+        android:padding="@dimen/indentation_6"
+        android:src="@drawable/ic_close_white"
+        app:layout_constraintBottom_toBottomOf="@id/txtSaveCameraScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

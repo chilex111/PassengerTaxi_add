@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyish_brown">
+
+    <ImageView
+        android:id="@+id/ivReadyPhotoScreen"
+        android:layout_width="@dimen/photo_frame_width"
+        android:layout_height="@dimen/photo_frame_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/indentation_46"
+        android:layout_marginStart="@dimen/indentation_46"
+        android:layout_marginBottom="@dimen/indentation_24"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="-0.01"
+        android:text="@string/txt_camera_screen_picture_frame"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ivReadyPhotoScreen"/>
+
+    <TextView
+        android:id="@+id/txtSaveCameraScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_save_personal_data"
+        android:layout_marginEnd="@dimen/indentation_16"
+        android:textColor="@color/colorWhite"
+        android:padding="@dimen/indentation_10"
+        android:layout_marginTop="@dimen/indentation_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:id="@+id/icBackOverlayPhotoReady"
+        app:layout_constraintTop_toTopOf="@id/txtSaveCameraScreen"
+        app:layout_constraintBottom_toBottomOf="@id/txtSaveCameraScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/indentation_16"/>
+
+</android.support.constraint.ConstraintLayout>

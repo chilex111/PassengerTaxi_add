@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:background="@color/colorAccent"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ImageView
+		android:id="@+id/imageOnboarding"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:scaleType="fitXY"
+		android:src="@drawable/onboarding_1_bonuses"
+		android:background="@color/colorWhite"
+		app:layout_constraintVertical_weight="3.4"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/txtTitleOnboarding"
+		tools:ignore="contentDescription"/>
+
+	<ImageView
+		android:id="@+id/imageView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:srcCompat="@drawable/ic_car"
+		app:layout_constraintBottom_toBottomOf="@id/imageOnboarding"
+		app:layout_constraintStart_toStartOf="@id/imageOnboarding"
+		/>
+
+	<TextView
+		android:id="@+id/txtTitleOnboarding"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:text="@string/title_onboarding_first"
+		android:textColor="@android:color/white"
+		android:textSize="@dimen/text_size_24"
+		android:textStyle="bold"
+		android:gravity="center"
+		app:layout_constraintBottom_toTopOf="@id/txtDescriptionOnboarding"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/imageOnboarding"
+		app:layout_constraintVertical_weight="0.6"/>
+
+	<TextView
+		android:id="@+id/txtDescriptionOnboarding"
+		android:layout_width="wrap_content"
+		android:layout_height="0dp"
+		android:text="@string/description_onboarding_first"
+		android:textColor="@android:color/white"
+		android:paddingStart="@dimen/indentation_26"
+		android:paddingEnd="@dimen/indentation_26"
+		android:textSize="@dimen/text_size_16"
+		android:gravity="center_horizontal"
+		app:layout_constraintVertical_weight="1"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/txtTitleOnboarding"/>
+
+	<TextView
+		android:id="@+id/txtOnboardingSkip"
+		style="@style/TxtStyleSecondary"
+		android:padding="@dimen/indentation_16"
+		android:fontFamily="sans-serif-medium"
+		android:text="@string/txt_onboarding_skip"
+		android:textColor="@color/text_view_selectable_purple"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

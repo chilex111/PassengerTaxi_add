@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/txtSetTimeTitle"
+        style="@style/TxtStyleMain"
+        android:layout_marginStart="@dimen/indentation_16"
+        android:layout_marginTop="@dimen/indentation_24"
+        android:paddingBottom="@dimen/indentation_34"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/txt_pick_time_date"
+        android:textColor="@color/text_color_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/txtSetTime"
+        style="@style/TxtStyleMain"
+        android:layout_width="0dp"
+        android:gravity="start|center_vertical"
+        android:drawableStart="@drawable/ic_clock"
+        android:drawablePadding="@dimen/indentation_8"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/txt_now"
+        android:textColor="@color/text_view_selectable_purple"
+        android:padding="@dimen/indentation_10"
+        android:layout_marginStart="@dimen/indentation_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSetTimeTitle"
+        app:layout_constraintEnd_toStartOf="@id/txtSetDate"/>
+
+    <TextView
+        android:id="@+id/txtSetDate"
+        style="@style/TxtStyleMain"
+        android:layout_width="0dp"
+        android:gravity="start|center_vertical"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/indentation_8"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/txt_today"
+        android:textColor="@color/text_view_selectable_purple"
+        android:padding="@dimen/indentation_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtSetTime"
+        app:layout_constraintTop_toBottomOf="@+id/txtSetTimeTitle" />
+
+</android.support.constraint.ConstraintLayout>

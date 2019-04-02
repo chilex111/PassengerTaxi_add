@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/swiperefresh"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".presentation.screen.cars_list.CarsListActivity">
+
+		<android.support.constraint.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<android.support.constraint.ConstraintLayout
+				android:id="@+id/dd"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent">
+
+				<android.support.constraint.ConstraintLayout
+					android:id="@+id/layoutCarInChek"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:visibility="gone"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent">
+
+					<TextView
+						android:id="@+id/tv"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="16dp"
+						android:layout_marginTop="28dp"
+						android:layout_marginEnd="16dp"
+						android:fontFamily="sans-serif-medium"
+						android:text="@string/you_have_no_cars_yet_but_soon_they_will_be_added_by_our_system"
+						android:textColor="@color/text_color_secondary"
+						android:textSize="16sp"
+						android:textStyle="normal"
+						android:gravity="center"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"/>
+
+				</android.support.constraint.ConstraintLayout>
+
+				<android.support.constraint.ConstraintLayout
+					android:id="@+id/layoutCarAproov"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:visibility="gone"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent">
+
+					<android.support.v7.widget.RecyclerView
+						android:id="@+id/recyclerCarsList"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="11dp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						/>
+				</android.support.constraint.ConstraintLayout>
+
+			</android.support.constraint.ConstraintLayout>
+
+			<Button
+				android:id="@+id/addCarBtn"
+				android:layout_width="wrap_content"
+				android:layout_height="36dp"
+				android:layout_gravity="center"
+				android:layout_marginStart="8dp"
+				android:layout_marginTop="28dp"
+				android:layout_marginEnd="8dp"
+				android:background="@drawable/background_button_corner"
+				android:elevation="6dp"
+				android:visibility="gone"
+				android:paddingLeft="36dp"
+				android:paddingRight="36dp"
+				android:shadowColor="#59000000"
+				android:text="@string/add_car"
+				android:textColor="@color/colorWhite"
+				android:textSize="14sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/dd"/>
+		</android.support.constraint.ConstraintLayout>
+	</android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

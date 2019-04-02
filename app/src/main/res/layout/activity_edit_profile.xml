@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:descendantFocusability="beforeDescendants"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	tools:context=".presentation.screen.registration.RegistrationActivity">
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="23dp"
+			android:fontFamily="sans-serif-medium"
+			android:textColor="@color/text_color_main"
+			android:textSize="16sp"
+			android:textStyle="normal"
+			tools:text="To apply you need to fill in these fields:"
+			/>
+
+		<ImageView
+			android:id="@+id/profile_photo_edit_e"
+			android:layout_width="110dp"
+			android:layout_height="110dp"
+			android:layout_gravity="center"
+			android:layout_marginTop="28dp"
+			android:layout_marginBottom="28dp"
+			android:background="@drawable/photo"
+			android:padding="3dp"
+			android:src="@drawable/photo_dummy_edit_personal_data"/>
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/inputLayoutName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/indentation_16"
+			android:textColorHint="@color/text_color_secondary"
+			app:hintTextAppearance="@style/StyleInputLayout">
+
+			<android.support.design.widget.TextInputEditText
+				android:id="@+id/editName"
+				style="@style/StyleEditText"
+				android:hint="First name"
+				android:inputType="text"/>
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/inputLayoutLastName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/indentation_16"
+			android:layout_marginEnd="@dimen/indentation_16"
+			android:textColorHint="@color/text_color_secondary"
+			app:hintTextAppearance="@style/StyleInputLayout">
+
+			<android.support.design.widget.TextInputEditText
+				android:id="@+id/editLastName"
+				style="@style/StyleEditText"
+				android:hint="Last name"
+				android:inputType="text"/>
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/inputLayoutEmail"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/indentation_16"
+			android:textColorHint="@color/text_color_secondary"
+			app:hintTextAppearance="@style/StyleInputLayout">
+
+			<android.support.design.widget.TextInputEditText
+				android:id="@+id/editEmail"
+				style="@style/StyleEditText"
+				android:hint="Email"
+				android:inputType="textEmailAddress"/>
+		</android.support.design.widget.TextInputLayout>
+
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/inputLayoutNumber"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/indentation_16"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp"
+			android:hint="Phone"
+			android:textColorHint="@color/text_color_secondary"
+			app:hintTextAppearance="@style/StyleInputLayout"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent">
+
+			<android.support.design.widget.TextInputEditText
+				android:id="@+id/editPhoneNumber1"
+				style="@style/StyleEditText"
+				android:enabled="false"
+				android:inputType="textEmailAddress"
+				android:text="0985838375 "/>
+		</android.support.design.widget.TextInputLayout>
+
+
+	</LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,501 @@
+<resources>
+    <string name="app_name">Kross Passenger</string>
+    <integer name="user_type">1</integer>
+
+    <!--api key-->
+    <string name="passagerApiKey">==ylSgXYOL4bZ+v|GVTu$atuqlg2Gp$ZNeQ#*KpN</string>
+    <!--facebook key-->
+    <string name="facebook_app_id" translatable="false">175479899966468</string>
+    <string name="facebook_app_client_token" translatable="false">d0b45fc41e24551c51ff0af333ab7ee0</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb175479899966468</string>
+
+    <!--socket content-->
+    <string name="socket_url">https://notification-dev.kross.taxi/</string>
+
+    <!--headers for retrofit-->
+    <string name="CONTENT_TYPE" translatable="false">application/json</string>
+    <string name="CACHE_CONNTROL" translatable="false">no-cache</string>
+    <string name="POSTMAN_TOKEN" translatable="false">c83597e6-4130-41bf-aef3-016d8b5814f2</string>
+
+    <!--preference key-->
+    <string name="preference_file" translatable="false">kross_passanger</string>
+    <string name="onboarding_passed_key" translatable="false">onboarding_passed</string>
+    <string name="token" translatable="false">token</string>
+    <string name="user_id" translatable="false">user id</string>
+    <string name="API_KEY" translatable="false">api key</string>
+    <string name="PUSH_TOKEN" translatable="false">push token</string>
+
+    <!--error helper content-->
+    <string name="txt_error_number_not_match">The phone number does not match</string>
+    <string name="txt_error_no_connection">No internet connection</string>
+    <string name="txt_error_code_registr">404</string>
+    <string name="txt_error_message_number_not_match">The phone number does not match</string>
+    <string name="txt_error_phone_number_alredy_exist">User with this email already exist</string>
+    <string name="txt_error_user_not_found">User not found</string>
+    <string name="txt_error_email_alredy_exist">User with this phone number already exist</string>
+    <string name="txt_error_message_license_already_exist">User with same license number is already exist</string>
+    <string name="txt_error_message_not_a_car_owner">You must be a car owner</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <!--validator content-->
+    <string name="validator_error_txt_shot_custom_hint">Password must be at least 6 characters</string>
+    <string name="validator_error_txt_shot">Number is short</string>
+    <string name="validator_error_txt_shot_field">Field is short</string>
+    <string name="validator_error_txt_long">Number is long</string>
+    <string name="validator_error_txt_withoutDot">Field not contains dot</string>
+    <string name="validator_error_txt_withoutAtSymbol">withoutAtSymbol</string>
+    <string name="validator_error_txt_notOnlyLatin">Field has non-latin symbols</string>
+    <string name="validator_error_txt_isEmpty">Field is empty</string>
+    <string name="validator_error_txt_containsSpace">Field contains space</string>
+    <string name="validator_error_txt_incorrect">Invalid e-mail</string>
+    <string name="validator_error_txt_notOnlyDigits">Field contains not only digits</string>
+    <string name="validator_error_txt_notFitCustomRegex">Field not fit custom regex</string>
+    <string name="txt_registration_step_account_name_validation">Account name must contains two word</string>
+    <string name="txt_registration_third_validation_error">Number must contain 9 symbols</string>
+
+    <!--onboarding content-->
+    <string name="title_onboarding_first">Comfy trips</string>
+    <string name="title_onboarding_second">Opportunities for car owners</string>
+    <string name="title_onboarding_third">Bonus system</string>
+    <string name="description_onboarding_first">Choose your level of comfort,\n driver\'s rating and payment method\n that is the best for you</string>
+    <string name="description_onboarding_second">Make money on your car. Rent out your vehicle, choose a driver in our system and track all activity and ride orders</string>
+    <string name="description_onboarding_third">Pay with bonuses for your trip.\n The more people you invite with the\n referral link, hte more bonuses you get</string>
+    <string name="txt_onboarding_skip">SKIP</string>
+
+    <!--login screen content-->
+    <string name="txt_button_next">NEXT</string>
+
+    <!--authorization screen content-->
+    <string name="txt_auth_screen_error_message">Internal Server Error. Please try later</string>
+    <string name="txt_authorization_toolbar_title">Authorization</string>
+    <string name="txt_auth_screen_enter_your_password">Enter your password</string>
+    <string name="txt_auth_screen_hint_enter_password">Enter password</string>
+    <string name="txt_auth_screen_label_authorization">Authorization</string>
+    <string name="txt_auth_screen_forgot_the_password">Forgot the password?</string>
+    <string name="txt_auth_screen_dialog_title">Password recovery</string>
+    <string name="txt_auth_screen_dialog_message">An letter was send on your e-mail. Please check your inbox and follow the directions.</string>
+    <string name="txt_auth_screen_dialog_pos_btn">OK</string>
+    <string name="txt_auth_screen_wrong_password">Wrong password</string>
+    <string name="KEY_INTENT_AUTHORIZATION">authorization</string>
+    <integer name="error_code_wrong_password">18</integer>
+    <integer name="error_code_user_blocked">20</integer>
+    <integer name="error_code_user_not_found">29</integer>
+    <string name="error_message_user_not_found">User with this phone number not found.</string>
+
+    <!--registration screen content-->
+    <string name="txt_registration_toolbar_title">Registration</string>
+    <string name="KEY_INTENT_REGISTRATION_PHONE">registration phone</string>
+    <string name="KEY_INTENT_REGISTRATION_TOKEN">registration token</string>
+    <string name="txt_registration_hint_first_name">First name *</string>
+    <string name="txt_registration_hint_last_name">Last name *</string>
+    <string name="txt_registration_hint_email">E-mail *</string>
+    <string name="txt_registration_hint_code">Invite code (optional)</string>
+    <string name="txt_registration_invalid_email">Invalid e-mail</string>
+    <string name="txt_registration_hint_create_password">Create a password</string>
+    <string name="txt_registration_hint_valid_password">Minimum 6 characters</string>
+    <string name="txt_registration_button">FINISH</string>
+
+    <!--add card screen-->
+    <string name="txt_add_cars_screen_toolbar_title">Add a card</string>
+    <string name="txt_add_card_screen_title">To make your payments easier and faster please add your card</string>
+    <string name="txt_add_card_screen_name">Card`s name (optional)</string>
+    <string name="txt_add_card_screen_number">Number</string>
+    <string name="txt_add_card_screen_date">Expiration date</string>
+    <string name="txt_add_card_cvv">CVV2/CVC2</string>
+    <string name="txt_add_card_name_hint">Name</string>
+    <string name="txt_add_card_number_hint">xxxx\u0020\u0020\u0020xxxx\u0020\u0020\u0020xxxx\u0020\u0020\u0020xxxx</string>
+    <string name="txt_add_car_date_hint">xx/xx</string>
+    <string name="txt_add_card_cvv_hint">xxx</string>
+
+    <!--cabinet screen-->
+    <string name="txt_cabinet_screen_toolbar_title">Cabinet</string>
+    <string name="txt_tab_cabinet_toolbar_title">Cabinet</string>
+    <string name="txt_wallet_card_title">MY WALLET\n</string>
+    <string name="txt_wallet_cabinet_subtitle">Pay for trips, withdraw your money to\n your bank account</string>
+    <string name="txt_cabinet_payment_methods">Payment methods</string>
+    <string name="txt_cabinet_password">Password</string>
+    <string name="txt_cabinet_my_trips">My trips</string>
+    <string name="txt_cabinet_my_favorite">My favorite</string>
+    <string name="txt_cabinet_news">News</string>
+    <string name="txt_cabinet_my_referral_link">My referral link</string>
+    <string name="txt_cabinet_become_car_owner">Become a car owner</string>
+    <string name="txt_cabinet_my_cars">My cars</string>
+    <string name="txt_cabinet_about_taxi_africa">About Taxi Africa</string>
+    <string name="txt_cabinet_support">Support</string>
+    <string name="txt_cabinet_faq">FaQ</string>
+    <string name="txt_cabinet_sign_out">SIGN OUT</string>
+    <string name="txt_cabinet_sign_out_upper_case">Sign out</string>
+    <string name="txt_cabinet_share_message">Share your referral link</string>
+
+    <!--common text resources-->
+    <string name="txt_save">SAVE</string>
+    <string name="txt_skip">SKIP</string>
+    <string name="txt_bottom_dialog_message">Take a picture</string>
+    <string name="txt_bottom_dialog_delete">Delete photo</string>
+
+
+    <string name="title_car_owner">Become a car owner</string>
+    <string name="title_verification">Verification</string>
+    <string name="apply_for_verification">APPLY FOR VERIFICATION</string>
+    <string name="add_an_insurance">Add an insurance</string>
+    <string name="add_a_proof_of_ownership">Add a proof of ownership</string>
+    <string name="add_a_car_photo">Add a car photo</string>
+    <string name="enter_license_plate_number">Enter license plate number</string>
+    <string name="choose_car_model">Choose car model</string>
+    <string name="choose_car_make">Choose car make</string>
+    <string name="car_information">Car information</string>
+    <string name="verify_my_e_mail">VERIFY MY E-MAIL</string>
+
+    <!--choose car make or model content-->
+    <string name="txt_choose_car_make_toolbar_title">Choose a car make</string>
+    <string name="txt_choose_car_model_toolbar_title">Choose a car model</string>
+    <integer name="REQUEST_CODE_CHOOSE_CAR_MAKE" translatable="false">6</integer>
+    <integer name="REQUEST_CODE_CHOOSE_CAR_MODEL" translatable="false">7</integer>
+    <string name="KEY_INTENT_CARE_MAKE" translatable="false">car make</string>
+    <string name="KEY_INTENT_CARE_MAKE_MODEL" translatable="false">car make model</string>
+    <string name="txt_choose_car_make_hint_search">Search</string>
+
+
+    <!--camera screen content-->
+    <string name="txt_camera_screen_picture_frame">Make sure the picture fits in the frame and all data is visible</string>
+    <string name="txt_camera_screen_car_photo">Make a clear picture of your car that fits in the frame</string>
+    <string name="txt_camera_screen_profile_photo">Make sure your face fits in the circle</string>
+    <string name="txt_camera_screen_setting_explanation">To take photo, allow permissions to take photos.</string>
+    <string name="txt_button_camera_screen_allow_permission">ALLOW TAKING PHOTOS</string>
+    <string name="KEY_INTENT_PHOTO_PATH">key intent photo path</string>
+
+    <!--personal data and edit personal data screen content-->
+    <string name="txt_personal_data_toolbar_title">Personal data</string>
+    <string name="txt_edit_personal_data_toolbar_title">Edit personal data</string>
+    <string name="txt_hint_verify_email_edit_profile">Your e-mail has been verified.</string>
+    <string name="txt_verify_email_personal_data">VERIFY MY E-MAIL</string>
+    <string name="txt_number_personal_data">Number</string>
+    <string name="txt_save_personal_data">SAVE</string>
+    <string name="txt_personal_data_hint_verify_error">Your e-mail hasn`t been verified. Try again.</string>
+    <string name="title_dialog_email_verification">E-mail verification</string>
+    <string name="message_dialog_email_verification">An email has been sent. Please check your inbox and follow the instructions.</string>
+    <string name="txt_error_compare_password">The current password not pass with old password</string>
+    <string name="txt_emty_data_personal_data">The some field is empty</string>
+    <string name="KEY_INTENT_PHOTO_AAD">oldPathPhoto</string>
+    <integer name="REQUEST_CODE_LICENSE_PHOTO">2</integer>
+    <integer name="REQUEST_CODE_PASSPORT_PHOTO">3</integer>
+    <string name="KEY_INTENT_REQUEST_CODE">requestCode</string>
+    <string name="car_insurance_added">Car insurance added</string>
+    <string name="SATUS">status</string>
+    <string name="add_car">ADD A CAR</string>
+    <string name="you_ve_been_verified">You`ve been verified</string>
+    <string name="your_personal">Your personal data was verified. Come to our office125 Uke Street take all your car`s registration documents, your driving license and passport.</string>
+    <string name="text_become_carowner">Make money on your car. You can rent out you vehicle, choose a driver in our system and track all activity and ride orders</string>
+    <string name="my_cars_title">My Cars</string>
+    <string name="add_new_car_title">Add new car</string>
+    <integer name="REQUEST_CODE_CAR_PHOTO">4</integer>
+    <integer name="REQUEST_CODE_OWNERSHIP">10</integer>
+    <integer name="REQUEST_CODE_CAR_INSURANCE">5</integer>
+    <integer name="REQUEST_CODE_PROFILE_PHOTO">111</integer>
+
+    <string name="date_prompt">all period</string>
+
+    <string-array name="dates_arrays">
+        <item>All period</item>
+        <item>This month</item>
+        <item>This week</item>
+        <item>Choose a date</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="you_have_no_cars_yet_but_soon_they_will_be_added_by_our_system">You have no cars yet but soon they will be added by our system.</string>
+    <string name="become">Become a car owner</string>
+
+    <string name="txt_request_code">request code</string>
+
+    <string name="settings_resolution_fail_msg">Location settings are busted</string>
+    <string name="location_req_success_msg">Location requests succeeded, apparently...</string>
+    <string name="where_to">Where to?</string>
+    <string name="cant_detect_location">We can\'t detect your current location. Please turn on your location service to continue!</string>
+    <string name="turn_on_location">Turn on location service</string>
+    <string name="we_can_t_detect">We can’t detect your current location. Please turn on your location service to continue.</string>
+    <string name="turn_on_location_service">TURN ON LOCATION SERVICE</string>
+    <string name="title_dlg_call">You`re going to make a  call</string>
+    <string name="message_dlg_call">Are you sure you want to call a dispatcher to order a taxi?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete_car_text">Delete car?</string>
+    <string name="my_driver">Driver</string>
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid lat lng used</string>
+    <string name="confirm_sign_out">Are you sure you want to sign out?</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_ok">OK</string>
+    <string name="add_home">Add home</string>
+    <string name="home_point">Home (%1$s)</string>
+    <string name="add_work">Add work</string>
+    <string name="work_point">Work (%1$s)</string>
+    <string name="my_favorite">My favorite</string>
+    <string name="add_destination_later">Add destination later</string>
+    <string name="set_pin_on_a_map">Set pin on a map</string>
+    <string name="recent">Recent:</string>
+    <string name="add_route">Add route</string>
+    <string name="search">Search</string>
+    <string name="choose_your_route">Choose your route</string>
+    <string name="leave_not_for_driver">Leave a note for a driver</string>
+    <string name="txt_standart_car">Standart car</string>
+    <string name="txt_premium_car">Premium car</string>
+    <string name="note_for_driver_was_added">A note was left for a driver</string>
+    <string name="close">Close</string>
+    <string name="nothing_found">Nothing found on your request</string>
+    <string name="standard_car">Standard car</string>
+    <string name="now">Now</string>
+    <string name="prox_price">₦%1$s-%2$s</string>
+    <string name="payment_methods">Payment methods</string>
+    <string name="card">Card</string>
+    <string name="payment_method_card_desc">Add your card to make your payments\nauthomatic and fast</string>
+    <string name="cash">Cash</string>
+    <string name="payment_method_cash_desc">Pay with cash if you don`t have a card added or\nthere`s not enough money there</string>
+    <string name="bonuses">Bonuses</string>
+    <string name="payment_method_bonuses_desc">Get bonuses in our referral system and pay for\nyour trips with them</string>
+    <string name="payment_methods_desc">You can choose your payment method while making an order</string>
+    <string name="label_from">From...</string>
+    <string name="label_to">To...</string>
+    <string name="label_add_route_point">Add route point</string>
+    <string name="button_to_add_one">You have no cards yet. Press «+» button to add one.</string>
+    <string name="my_cards">My cards</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_bonuses">Bonuses</string>
+    <string name="label_cash">Cash</string>
+    <string name="add_favorite_addresses_title">Add favorite addresses</string>
+    <string name="add_favorite_subtitle">Have better access to your favorite places</string>
+    <string name="add_favorite_routes_title">Add favorite routes</string>
+    <string name="tab_addresses">ADDRESSES</string>
+    <string name="tab_routes">ROUTES</string>
+    <string name="add_the_address">Add the address</string>
+    <string name="edit_the_address">Edit the address</string>
+    <string name="delete_card_placeholder">Are you sure you want to delete your %1$s card?</string>
+    <string name="add_favorite_address">Add a favorite address</string>
+    <string name="label_address">Address</string>
+    <string name="label_name_optional">Name (optional)</string>
+    <string name="label_edit">Edit</string>
+    <string name="add_a_route">Add a route</string>
+    <string name="label_order_taxi">ORDER TAXI</string>
+
+    <!--screen set time trip content-->
+    <string name="txt_label_time_trip">Time and date</string>
+    <string name="txt_pick_time_date">Pick time and date of your trip</string>
+    <string name="txt_now">NOW</string>
+    <string name="txt_today">TODAY</string>
+
+    <!--screen leave note to driver and enter phone number of passenger-->
+    <string name="txt_label_note">Leave a note</string>
+    <string name="txt_label_phone_number">Number</string>
+    <string name="txt_hint_leave_note">Leave a comment for your driver</string>
+    <string name="txt_hint_enter_number">Enter a number</string>
+    <string name="txt_hint_enter_code">+234</string>
+
+    <!--bottom dialog trip-->
+    <string name="txt_me">Me</string>
+    <string name="txt_someone_else">Someone else</string>
+    <string name="txt_lable_taxi_for">This taxi is for</string>
+    <string name="txt_choose_from_phonebook">Choose from phonebook</string>
+    <string name="txt_enter_number">Enter a number</string>
+    <string name="txt_setting">Setting</string>
+    <string name="txt_permission_contact_denied">Without permission \"Read phone\" we can\'t open contacts</string>
+    <string name="txt_trip_cost">Trip cost:</string>
+    <string name="txt_search_driver">We are looking for a driver.\n It might take some time</string>
+    <string name="txt_cancel_upper_case">CANCEL</string>
+    <string name="txt_driver_not_found">Sorry, there is no driver. Please try again later</string>
+    <string name="txt_try_again">TRY AGAIN IN 15 MINUTES</string>
+    <string name="txt_driver_on_way">Driver`s on his way</string>
+
+    <!--cancel trip screen-->
+    <string name="cancel_screen_title">Trip details</string>>
+    <string name="txt_reason">Other reason</string>
+    <string name="btn_answer">Answer</string>
+    <string name="txt_reason_title">Why did you cancel the trip?</string>
+    <string name="txt_reason_1">I don`t need it any more</string>>
+    <string name="txt_reason_2">I didn`t like driver`s rating</string>
+    <string name="txt_reason_3">I choose a wrong route</string>
+    <string name="txt_reason_4">It was very expensive</string>
+    <string name="txt_alert_title">Your trip has been cancelled</string>
+    <string name="txt_alert_text">You can order another one.</string>
+
+    <!--trip details activity-->
+    <string name="label_details_screen_title">Trip details</string>>
+    <string name="btn_one_more_trip">ONE MORE TRIP</string>
+    <string name="txt_one_more_description">While on trip you can order another trip for your family
+and friends or make a postponed trip.</string>
+    <string name="txt_your_driver">Your driver</string>
+    <string name="txt_payment">Payment</string>
+    <string name="txt_trip_mode">On a trip</string>
+
+    <!--imageView item in trip-->
+    <string name="btn_edit">EDIT</string>
+
+    <!--bottom dialog on a trip now-->
+    <string name="txt_on_a_trip">On trip</string>
+    <string name="txt_trip_number">TRIP #%d</string>
+
+    <!--driver rate screen-->
+    <string name="label_title_rate_driver">Rate the driver</string>
+    <string name="txt_overral_rating">Overral rating</string>
+    <string name="txt_detailed_rate">Detailed rating</string>
+    <string name="txt_air_condition">Air-condition</string>
+    <string name="txt_car_neatness">Car neatness</string>
+    <string name="txt_attitude">Driver`s attitude</string>
+    <string name="txt_comment_hint">Leave a comment</string>
+    <string name="btn_send_rate">SEND</string>
+
+    <!--one more trip-->
+    <string name="label_screen_title_one_more_trip">One more trip</string>
+    <string name="btn_order_taxi">ORDER TAXI</string>
+    <string name="txt_text_input_hint">Leave a note for a driver</string>
+    <string name="txt_cash">Cash</string>
+    <string name="txt_bonuses">Bonuses</string>
+    <string name="txt_card">**77</string>
+
+    <!--my wallet screen-->
+    <string name="txt_my_wallet_title">My wallet</string>
+    <string name="txt_my_bonuses">MY BONUSES</string>
+    <string name="txt_add_bank_account">ADD A BANK ACCOUNT</string>
+    <string name="txt_withdraw_bonuses">WITHDRAW BONUSES</string>
+    <string name="txt_what_to_do">What can I do with my bonuses?</string>
+    <string name="txt_action_1">Pay with bonuses for trips</string>
+    <string name="txt_action_2">Withdraw bonuses on bank account</string>
+    <string name="txt_action_3">Negative account</string>
+    <string name="txt_action_details_1">Pay with bonuses for your trips. Just choose payment method “Bonuses” during trip order.</string>
+    <string name="txt_action_details_2">You need a minimum of 10,000 to request payout. You must set up bank account for payout.</string>
+    <string name="txt_action_details_3">Your account is negative due to outstanding bill. Please make payment</string>
+    <string name="txt_my_bank_account">My bank account</string>
+    <string name="txt_negative_balance">Account negative. Replenish your account</string>
+
+    <!--add bank account-->
+    <string name="txt_bank_account_title">Add bank account</string>
+    <string name="txt_select_bank_title">List of banks</string>
+    <string name="txt_bank_details_title">Bank account details</string>
+    <string name="txt_bank_name">Bank name</string>
+    <string name="txt_bank_number">Bank account number</string>
+    <string name="txt_account_name">Account name</string>
+
+    <!--bonus transfer request-->
+    <string name="txt_transfer_title">Bonus transfer request</string>
+    <string name="txt_transfer_details_title">Enter the amount of bonuses you want to transfer to your bank account:</string>
+    <string name="txt_transfer_hint">Enter the amount</string>
+    <string name="txt_transfer_converted">%s bonus=%s NGN</string>
+    <string name="txt_transfer_left">Amount left: ₦%s</string>
+    <string name="txt_transfer_error">There are unsufficient bonuses to transfer</string>
+    <string name="txt_transfer_button_title">WITHDRAW THE BONUSES</string>
+
+    <!--change password activity-->
+    <string name="title_change_password">Password</string>
+    <string name="txt_current_password">Enter your current password</string>
+    <string name="txt_new_password">Choose new password</string>
+    <string name="txt_error_change_password">Error changing password</string>
+
+    <!--my trips activity-->
+    <string name="title_my_trips">My trips</string>
+    <string name="title_past_tab">PAST</string>
+    <string name="title_scheduled_tab">SCHEDULED</string>
+    <string name="txt_past_trips_empty">Here you will see information about your past trips: route, cost, payment method, time and your estimation.</string>
+    <string name="txt_scheduled_trips_empty">Here you will see information about your postponed trips: route, approximate cost, payment method and time of the start.</string>
+    <string name="btn_cancel">CANCEL</string>
+    <string name="btn_edit_time">EDIT TIME</string>
+    <string name="txt_state_outstanding">Outstanding</string>
+    <string name="txt_state_cancelled">Cancelled</string>
+    <string name="txt_state_toll">Toll</string>
+    <string name="txt_state_charged">Been charged</string>
+
+    <!--about screen-->
+    <string name="title_about_app">About Kross Taxi</string>
+
+    <!--news screen-->
+    <string name="title_news_screen">News</string>
+    <string name="btn_show_more">READ MORE</string>
+
+    <!--trip finished activity-->
+    <string name="txt_trip_is_over">Your trip is over</string>
+    <string name="txt_base_fare">Base fare</string>
+    <string name="txt_time">Time </string>
+    <string name="txt_distance">Distance</string>
+    <string name="txt_toll">Toll</string>
+    <string name="btn_need_help">NEED HELP?</string>
+    <string name="txt_your_trip">Your trip</string>
+    <string name="txt_add_to_favourite">ADD THE ROUTE TO FAVORITE</string>
+    <string name="btn_next">NEXT</string>
+
+    <!--bottom dialog for car-->
+    <string name="txt_standard_car_selection">Standard car</string>
+    <string name="txt_premium_car_selection">Premium car</string>
+    <string name="txt_standard_car_details">All cars before 2017 year of made</string>
+    <string name="txt_premium_car_details">All cars after 2017 year of made</string>
+
+    <!--help screen-->
+
+    <string name="dd">Your driver has arrived</string>
+    <string name="you_can_go">You can go out.</string>
+    <string name="decline_title">Driver has cancelled your trip</string>
+    <string name="decline_text">Trip has been cancelled because driver couldn`t get to your location.</string>
+    <string name="found_title">A driver was found for your trip</string>
+    <string name="driver_cancel_title">Driver has cancelled your trip</string>
+    <string name="driver_arrive_title">Your driver has arrived</string>
+    <string name="driver_cancel_text">Trip has been cancelled because you haven`t shown up in 5 minutes.</string>
+    <string name="driver_arrive_text">You can go out.</string>
+    <string name="body_key">body</string>
+    <string name="title_key">title</string>
+    <string name="type_key">type</string>
+    <string name="cancel_trip_title">Cancel the trip</string>
+    <string name="cancel_trip_text">Are you sure you want to cancel your trip?</string>
+    <string name="cancel_trip_text1">You ordered your trip </string>
+    <string name="cancel_trip_text2"> minute ago. If you cancel your trip in more than 5 minutes you will be charged. Are you sure you want to cancel your trip?</string>
+    <string name="cancel_trip_title_ch">You will be charged</string>
+    <string name="cancel_trip_text_ch">You cancelled your trip in more than 5 minutes. Charge is ₦X.</string>
+    <string name="arrived_key">ARRIVED_TIME</string>
+    <string name="date_key">date</string>
+    <string name="cancel_titlee">Cancel the trip</string>
+    <string name="alert_ordered_text">You ordered your trip</string>
+    <string name="alert_ordered_text_next">minute ago. If you cancel your trip in more than 5 minutes you will be charged. Are you sure you want to cancel your trip?</string>
+    <string name="ok">Ok</string>
+    <string name="PUSH_TYPE">TYPE</string>
+    <string name="minutes_waiting">10 minutes waiting is free</string>
+    <string name="ok_alert_btn">Ok</string>
+    <string name="cancel_alert_btn">Cancel</string>
+    <string name="adress_added_to_favorite_toast">Adress added to favorite</string>
+    <string name="adress_removed_from_favorite">Adress removed from favorite</string>
+    <string name="route_added_to_favorite">Route added to favorite</string>
+    <string name="route_removed_from_favorite">Route removed from favorite</string>
+    <!--help screen-->
+    <string name="label_help_screen_title">Help</string>
+    <string name="text_help_accident">I was involved in an accident</string>
+    <string name="text_help_refund">I would like a refund</string>
+    <string name="text_help_lost">I lost an item</string>
+    <string name="text_help_driver">My driver was unprofessional</string>
+    <string name="text_help_vehicle">My vehicle was not what I expected</string>
+    <string name="text_help_different">I had a different issue</string>
+    <string name="text_help_hint">Write about your issue</string>
+
+    <string name="news">News</string>
+    <string name="edit">Edit</string>
+    <string name="personal_data">Personal data</string>
+    <string name="emsil">E-mail verification</string>
+    <string name="dfd">A letter was sent on your e-mail. Please check your inbox and follow the directions.</string>
+
+    <string name="assign">ASSIGN THE DRIVER</string>
+    <string name="rekease_the_driver">RELEASE THE DRIVER</string>
+    <string name="change_alert">You already have a driver. Do you want to give him up?</string>
+    <string name="no_no">no</string>
+    <string name="delete">Delete</string>
+    <string name="have_no_car">You have no сar yet</string>
+    <string name="choose_a_date">Choose a date</string>
+    <string name="driver_was_released">The driver was released</string>
+    <string name="has_been_assigned">Driver has been assigned</string>
+    <string name="proposal_already_sent_to_the_driver">Car proposal already sent to the driver</string>
+    <string name="unknown_location">unknown location</string>
+    <string name="drive_from">Drive from</string>
+    <string name="ok_btn">Ок</string>
+    <string name="share">Share</string>
+    <string name="complaint">Complaint</string>
+    <string name="make_an_appeal">Make an Appeal</string>
+    <string name="request">Request</string>
+    <string name="refund">Refund</string>
+
+
+</resources>

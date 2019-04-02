@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/standardLayout"
+                >
+
+                <ImageView
+                    android:id="@+id/standardImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_car_type_standard"
+                    android:layout_marginTop="@dimen/indentation_22"
+                    android:layout_marginStart="@dimen/indentation_16"
+                    android:layout_marginBottom="@dimen/indentation_14"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/standardTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textColor="#555555"
+                    android:letterSpacing="-0.01"
+                    android:text="@string/txt_standard_car_selection"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toEndOf="@id/standardImageView"
+                    app:layout_constraintTop_toTopOf="@id/standardImageView"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal"
+                    android:textColor="#999ea5"
+                    android:letterSpacing="-0.01"
+                    android:text="@string/txt_standard_car_details"
+                    app:layout_constraintStart_toStartOf="@id/standardTextView"
+                    app:layout_constraintBottom_toBottomOf="@id/standardImageView"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/premiumLayout"
+                >
+
+                <ImageView
+                    android:id="@+id/premiumImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_cars"
+                    android:layout_marginTop="@dimen/indentation_14"
+                    android:layout_marginStart="@dimen/indentation_16"
+                    android:layout_marginBottom="@dimen/indentation_28"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/premiumTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textColor="#555555"
+                    android:letterSpacing="-0.01"
+                    android:text="@string/txt_premium_car_selection"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toEndOf="@id/premiumImageView"
+                    app:layout_constraintTop_toTopOf="@id/premiumImageView"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal"
+                    android:textColor="#999ea5"
+                    android:letterSpacing="-0.01"
+                    android:text="@string/txt_premium_car_details"
+                    app:layout_constraintStart_toStartOf="@id/premiumTextView"
+                    app:layout_constraintBottom_toBottomOf="@id/premiumImageView"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+        </FrameLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

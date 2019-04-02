@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+    <!--for padding or margin-->
+    <dimen name="indentation_1">1dp</dimen>
+    <dimen name="indentation_2">2dp</dimen>
+    <dimen name="indentation_3">3dp</dimen>
+    <dimen name="indentation_4">4dp</dimen>
+    <dimen name="indentation_6">6dp</dimen>
+    <dimen name="indentation_8">8dp</dimen>
+    <dimen name="indentation_10">10dp</dimen>
+    <dimen name="indentation_12">12dp</dimen>
+    <dimen name="indentation_14">14dp</dimen>
+    <dimen name="indentation_15">15dp</dimen>
+    <dimen name="indentation_16">16dp</dimen>
+    <dimen name="indentation_18">18dp</dimen>
+    <dimen name="indentation_20">20dp</dimen>
+    <dimen name="indentation_22">22dp</dimen>
+    <dimen name="indentation_24">24dp</dimen>
+    <dimen name="indentation_26">26dp</dimen>
+    <dimen name="indentation_28">28dp</dimen>
+    <dimen name="indentation_30">30dp</dimen>
+    <dimen name="indentation_36">36dp</dimen>
+    <dimen name="indentation_39">39dp</dimen>
+    <dimen name="indentation_40">40dp</dimen>
+    <dimen name="indentation_46">46dp</dimen>
+    <dimen name="indentation_50">50dp</dimen>
+    <dimen name="indentation_49">49dp</dimen>
+    <dimen name="indentation_51">51dp</dimen>
+    <dimen name="indentation_55">54dp</dimen>
+    <dimen name="indentation_52">52dp</dimen>
+    <dimen name="indentation_60">60dp</dimen>
+    <dimen name="indentation_76">76dp</dimen>
+    <dimen name="indentation_78">78dp</dimen>
+    <dimen name="indentation_92">92dp</dimen>
+    <dimen name="indentation_100">100dp</dimen>
+    <dimen name="indentation_116">116dp</dimen>
+    <dimen name="indentation_124">124dp</dimen>
+    <dimen name="indentation_152">152dp</dimen>
+    <dimen name="indentation_160">160dp</dimen>
+    <dimen name="indentation_170">170dp</dimen>
+    <dimen name="indentation_200">200dp</dimen>
+    <dimen name="indentation_216">216dp</dimen>
+    <dimen name="indentation_266">266dp</dimen>
+    <dimen name="indentation_440">440dp</dimen>
+    <!--for view params-->
+    <dimen name="view_params_40">40dp</dimen>
+    <dimen name="view_params_178">178dp</dimen>
+    <dimen name="view_params_280">280dp</dimen>
+    <dimen name="view_params_275">275dp</dimen>
+    <dimen name="view_params_257">257dp</dimen>
+
+    <dimen name="view_params_185">185dp</dimen>
+    <!--for text size-->
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_26">26sp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--view size-->
+    <dimen name="wallet_card_width">286dp</dimen>
+    <dimen name="wallet_card_height">154dp</dimen>
+
+
+    <!--for photo frame-->
+    <dimen name="photo_frame_width">304dp</dimen>
+    <dimen name="photo_frame_height">220dp</dimen>
+    <dimen name="photo_passport_frame_height">246dp</dimen>
+    <dimen name="photo_car_insurance_height">354dp</dimen>
+    <dimen name="photo_car_insurance_width">240dp</dimen>
+    <dimen name="photo_frame_circle_width">290dp</dimen>
+    <dimen name="photo_frame_circle_height">290dp</dimen>
+    <dimen name="photo_frame_circle_line_width">292dp</dimen>
+    <dimen name="photo_frame_circle_line_height">292dp</dimen>
+
+</resources>

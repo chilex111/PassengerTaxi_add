@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".presentation.screen.cabinet.edit_profile.personal_data.PersonalDataActivity">
+
+
+	<ImageView
+		android:id="@+id/profile_photo_edit"
+		android:layout_width="110dp"
+		android:layout_height="110dp"
+		android:layout_gravity="center"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="18dp"
+		android:layout_marginEnd="8dp"
+		android:background="@drawable/photo"
+		android:padding="3dp"
+		android:src="@drawable/photo_dummy_cabinet"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+
+	<ImageView
+		android:id="@+id/imageView13"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="43dp"
+		android:src="@drawable/ic_first_name_last_name"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/profile_photo_edit"/>
+
+	<TextView
+		android:id="@+id/user_name_personal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="26dp"
+		android:fontFamily="sans-serif"
+		android:letterSpacing="-0.01"
+		android:text="Viktoriia Schmidt"
+		android:textColor="@color/text_color_main"
+		android:textSize="16sp"
+		android:textStyle="normal"
+		app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+		app:layout_constraintStart_toEndOf="@+id/imageView13"
+		app:layout_constraintTop_toTopOf="@+id/imageView13"/>
+
+
+	<ImageView
+		android:id="@+id/imageView14"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="30dp"
+		android:src="@drawable/ic_phone_number"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imageView13"/>
+
+	<TextView
+		android:id="@+id/user_phone_personal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="26dp"
+		android:fontFamily="sans-serif"
+		android:letterSpacing="-0.01"
+		android:text="+2340701234567"
+		android:textColor="@color/text_color_main"
+		android:textSize="16sp"
+		android:textStyle="normal"
+		app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+		app:layout_constraintStart_toEndOf="@+id/imageView14"
+		app:layout_constraintTop_toTopOf="@+id/imageView14"/>
+
+	<ImageView
+		android:id="@+id/imageView15"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="30dp"
+		android:src="@drawable/ic_first_name_last_name"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imageView14"
+		tools:srcCompat="@drawable/ic_e_mail"/>
+
+	<TextView
+		android:id="@+id/user_mail_personal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="26dp"
+		android:fontFamily="sans-serif"
+		android:letterSpacing="-0.01"
+		android:text="viktoriia@gmail.com"
+		android:textColor="@color/text_color_main"
+		android:textSize="16sp"
+		android:textStyle="normal"
+		app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+		app:layout_constraintStart_toEndOf="@+id/imageView15"
+		app:layout_constraintTop_toTopOf="@+id/imageView15"/>
+
+
+	<Button
+		android:id="@+id/mailConfirmEditBtn"
+		android:layout_width="wrap_content"
+		android:layout_height="36dp"
+		android:layout_gravity="center"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="32dp"
+		android:layout_marginEnd="8dp"
+		android:background="@drawable/background_button_corner"
+		android:paddingLeft="36dp"
+		android:paddingRight="36dp"
+		android:shadowColor="#59000000"
+		android:text="@string/verify_my_e_mail"
+		android:textColor="@color/colorWhite"
+		android:textSize="14sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/user_mail_personal"/>
+
+	<include
+		android:id="@+id/progressBarMail"
+		layout="@layout/layout_progress_bar"
+		android:visibility="visible"/>
+
+</android.support.constraint.ConstraintLayout>

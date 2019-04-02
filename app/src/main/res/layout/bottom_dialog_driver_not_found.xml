@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/txtDriverNotFound"
+        style="@style/TxtStyleSecondary"
+        android:text="@string/txt_driver_not_found"
+        android:textColor="@color/text_color_main"
+        android:layout_marginTop="@dimen/indentation_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dottedLineView"/>
+
+    <ImageView
+        android:id="@+id/dottedLineView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/indentation_4"
+        android:layerType="software"
+        android:src="@drawable/dotted_line"
+        android:layout_marginTop="@dimen/indentation_24"
+        android:layout_marginBottom="@dimen/indentation_26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtCancelTripDriverNotFound"
+        app:layout_constraintTop_toBottomOf="@id/txtDriverNotFound"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/txtCancelTripDriverNotFound"
+        style="@style/TxtStyleSecondary"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/text_view_selectable_purple"
+        android:text="@string/txt_cancel_upper_case"
+        android:layout_marginBottom="@dimen/indentation_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dottedLineView"
+        app:layout_constraintEnd_toStartOf="@id/txtTryAgainDriverNotFound"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtTryAgainDriverNotFound"
+        style="@style/TxtStyleSecondary"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/text_view_selectable_purple"
+        android:text="@string/txt_try_again"
+        android:layout_marginTop="@dimen/indentation_26"
+        android:layout_marginBottom="@dimen/indentation_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dottedLineView"
+        app:layout_constraintStart_toEndOf="@id/txtCancelTripDriverNotFound"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

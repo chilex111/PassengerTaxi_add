@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	tools:ignore="HardcodedText"
+	android:layout_height="match_parent"
+	tools:context=".presentation.screen.driver_details.DriverDetailsActivity">
+
+	<android.support.v4.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@+id/btnAssignDriver"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<android.support.constraint.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<ImageView
+				android:id="@+id/imageView12"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="37dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginEnd="37dp"
+				android:src="@drawable/divider_long"
+				android:contentDescription="@string/app_name"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="1.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/registrationDateTv"/>
+
+			<ImageView
+				android:id="@+id/driverPhotoDetails"
+				android:layout_width="84dp"
+				android:layout_height="84dp"
+				android:layout_gravity="center"
+				android:layout_marginStart="24dp"
+				android:layout_marginTop="34dp"
+				android:contentDescription="@string/app_name"
+				android:background="@drawable/photo_dummy_cabinet"
+				android:src="@drawable/photo"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"/>
+
+			<TextView
+				android:id="@+id/firstLastNameTv"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="28dp"
+				android:layout_marginEnd="8dp"
+				android:fontFamily="sans-serif-medium"
+				android:letterSpacing="-0.02"
+				android:text="Finmilayo Odoemene"
+				android:textColor="@color/text_color_main"
+				android:textSize="16sp"
+				android:textStyle="normal"
+				app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/driverPlateTv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="8dp"
+				android:fontFamily="sans-serif-medium"
+				android:text="Nigeria, Lagos"
+				android:textColor="@color/text_color_secondary"
+				android:textSize="14sp"
+				android:textStyle="normal"
+				app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails"
+				app:layout_constraintTop_toBottomOf="@+id/firstLastNameTv"/>
+
+
+			<TextView
+				android:id="@+id/yearOfExperienceTv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="13dp"
+				android:fontFamily="sans-serif"
+				android:letterSpacing="-0.02"
+				android:text="10 years of experience"
+				android:textColor="@color/text_color_main"
+				android:textSize="14sp"
+				android:textStyle="normal"
+				app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails"
+				app:layout_constraintTop_toBottomOf="@+id/driverPlateTv"/>
+
+			<TextView
+				android:id="@+id/driverPhoneTvDet"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="11dp"
+				android:fontFamily="sans-serif"
+				android:letterSpacing="-0.02"
+				android:text="+2340701234567"
+				android:textColor="@color/cornflower"
+				android:onClick="callToDriverP"
+				android:textSize="14sp"
+				android:textStyle="normal"
+				app:layout_constraintStart_toEndOf="@+id/driverPhotoDetails"
+				app:layout_constraintTop_toBottomOf="@+id/yearOfExperienceTv"/>
+
+			<TextView
+				android:id="@+id/ridesCountTv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="41dp"
+				android:layout_marginTop="20dp"
+				android:fontFamily="sans-serif-medium"
+				android:gravity="end"
+				android:letterSpacing="-0.02"
+				android:text="150 rides"
+				android:textColor="@color/text_color_main"
+				android:textSize="16sp"
+				android:textStyle="normal"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/driverPhoneTvDet"/>
+
+			<TextView
+				android:id="@+id/registrationDateTv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:layout_marginEnd="41dp"
+				android:letterSpacing="-0.02"
+				android:lineSpacingExtra="5sp"
+				android:text="In system since 13.05.17"
+				android:textColor="@color/text_color_main"
+				android:textSize="16sp"
+				android:textStyle="normal"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/driverPhoneTvDet"/>
+
+
+			<android.support.constraint.ConstraintLayout
+				android:id="@+id/layoutWithRatingDetails"
+				android:layout_width="60dp"
+				android:layout_height="27dp"
+				android:layout_marginTop="65dp"
+				android:background="@drawable/rating_background"
+				android:visibility="gone"
+				app:layout_constraintEnd_toEndOf="@+id/driverPhotoDetails"
+				app:layout_constraintHorizontal_bias="0.541"
+				app:layout_constraintStart_toStartOf="@+id/driverPhotoDetails"
+				app:layout_constraintTop_toTopOf="@+id/driverPhotoDetails">
+
+				<ImageView
+					android:id="@+id/carPhoto2Details"
+					android:layout_width="wrap_content"
+					android:layout_height="12dp"
+					android:layout_gravity="center"
+					android:layout_marginEnd="11dp"
+					android:src="@drawable/ic_star_mini"
+					android:contentDescription="@string/app_name"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.42000002"/>
+
+				<TextView
+					android:id="@+id/ratingDetails"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="11dp"
+					android:fontFamily="sans-serif-medium"
+					android:gravity="end"
+					android:letterSpacing="-0.01"
+					android:text="4.5"
+					android:textColor="@color/text_color_secondary"
+					android:textSize="12sp"
+					android:textStyle="normal"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					app:layout_constraintVertical_bias="0.35000002"/>
+
+
+			</android.support.constraint.ConstraintLayout>
+
+			<ImageView
+				android:id="@+id/ratingNew"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginTop="65dp"
+				android:src="@drawable/rating_new"
+				android:contentDescription="@string/app_name"
+				app:layout_constraintEnd_toEndOf="@+id/driverPhotoDetails"
+				app:layout_constraintStart_toStartOf="@+id/driverPhotoDetails"
+				app:layout_constraintTop_toTopOf="@+id/driverPhotoDetails"/>
+
+			<TextView
+				android:id="@+id/rewiewsCountTv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="40dp"
+				android:layout_marginTop="32dp"
+				android:fontFamily="sans-serif"
+				android:text="134 REVIEWS:"
+				android:textColor="@color/text_color_main"
+				android:textSize="14sp"
+				android:textStyle="bold"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/imageView12"/>
+
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/comments"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:paddingTop="2dp"
+				app:layout_behavior="@string/appbar_scrolling_view_behavior"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/rewiewsCountTv"
+				tools:listitem="@layout/comment_item">
+			</android.support.v7.widget.RecyclerView>
+		</android.support.constraint.ConstraintLayout>
+
+
+	</android.support.v4.widget.NestedScrollView>
+
+	<include
+		android:id="@+id/progressBarDriver"
+		layout="@layout/layout_progress_bar"
+		android:visibility="visible"/>
+
+
+	<Button
+		android:id="@+id/btnAssignDriver"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:background="@drawable/button_selector"
+		android:enabled="true"
+		android:text="@string/assign"
+		android:textColor="@android:color/white"
+		android:textSize="@dimen/text_size_14"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>

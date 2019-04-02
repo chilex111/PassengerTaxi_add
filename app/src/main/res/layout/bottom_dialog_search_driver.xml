@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        style="@style/TxtStyleSecondary"
+        android:textColor="@color/text_color_main"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/txt_search_driver"
+        android:layout_margin="@dimen/indentation_16"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarSearchDriver"
+        android:layout_width="@dimen/indentation_200"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:theme="@style/AppTheme"
+        android:layout_marginTop="@dimen/indentation_20"
+        android:layout_marginBottom="@dimen/indentation_20"
+        android:indeterminate="true"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btnCancelSearchDriver"
+        android:layout_width="@dimen/indentation_200"
+        android:layout_height="@dimen/indentation_46"
+        android:backgroundTint="@color/text_view_selectable_purple"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorWhite"
+        android:text="@string/txt_cancel_upper_case"
+        android:layout_marginBottom="@dimen/indentation_12"/>
+
+</LinearLayout>

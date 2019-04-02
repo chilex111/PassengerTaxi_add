@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivCard"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/ic_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@string/medium"
+        android:text="@string/card"
+        android:textColor="@color/text_color_main"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivCard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCardDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/payment_method_card_desc"
+        android:textColor="@color/text_grey"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tvLabelCard"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelCard" />
+
+    <View
+        android:id="@+id/cardClickArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tvLabelCash"
+        android:layout_marginBottom="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/ivArrowCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_keyboard_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@id/ivCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivCard" />
+
+    <ImageView
+        android:id="@+id/ivCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_cash"
+        app:layout_constraintStart_toStartOf="@id/ivCard"
+        app:layout_constraintTop_toBottomOf="@id/tvCardDesc" />
+
+    <TextView
+        android:id="@+id/tvLabelCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@string/medium"
+        android:text="@string/cash"
+        android:textColor="@color/text_color_main"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivCash"
+        app:layout_constraintTop_toBottomOf="@id/tvCardDesc" />
+
+    <TextView
+        android:id="@+id/tvCashDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/payment_method_cash_desc"
+        android:textColor="@color/text_grey"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tvLabelCash"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelCash" />
+
+    <View
+        android:id="@+id/cashClickArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardClickArea"
+        app:layout_constraintBottom_toTopOf="@id/tvLabelBonuses"
+        android:layout_marginBottom="16dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/ivBonuses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/ic_bonuses"
+        app:layout_constraintStart_toStartOf="@id/ivCard"
+        app:layout_constraintTop_toBottomOf="@id/tvCashDesc" />
+
+    <TextView
+        android:id="@+id/tvLabelBonuses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@string/medium"
+        android:text="@string/bonuses"
+        android:textColor="@color/text_color_main"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ivCash"
+        app:layout_constraintTop_toBottomOf="@id/tvCashDesc" />
+
+    <TextView
+        android:id="@+id/tvBonusesDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/payment_method_bonuses_desc"
+        android:textColor="@color/text_grey"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tvLabelCash"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelBonuses" />
+
+    <View
+        android:id="@+id/bonusesClickArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cashClickArea"
+        app:layout_constraintBottom_toTopOf="@id/tvPaymentDesc"
+        android:layout_marginBottom="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvPaymentDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/payment_methods_desc"
+        android:textColor="@color/text_color_main"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBonusesDesc" />
+
+</android.support.constraint.ConstraintLayout>

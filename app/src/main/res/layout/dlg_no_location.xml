@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_corner_6">
+
+    <TextView
+        android:id="@+id/tv_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:gravity="start"
+        android:textColor="@color/text_color_main"
+        android:textSize="16sp"
+        android:fontFamily="@string/medium"
+        android:text="@string/we_can_t_detect" />
+
+    <Button
+        android:id="@+id/btn_turn_on"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:text="@string/turn_on_location_service"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/indentation_8"
+        android:layout_marginEnd="@dimen/indentation_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_body"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_no_location"/>
+
+
+</android.support.constraint.ConstraintLayout>

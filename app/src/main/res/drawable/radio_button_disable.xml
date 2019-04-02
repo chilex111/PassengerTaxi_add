@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:innerRadius="@dimen/indentation_3"
+       android:shape="oval"
+       android:useLevel="false" >
+
+	<solid android:color="@color/purple_dark" />
+
+	<size
+		android:height="@dimen/indentation_7"
+		android:width="@dimen/indentation_7" />
+
+</shape>

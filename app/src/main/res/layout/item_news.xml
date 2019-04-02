@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/indentation_16"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@string/medium"
+        android:gravity="start"
+        android:letterSpacing="-0.01"
+        android:textColor="@color/text_color_main"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/shareButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Premium cars in TaxiAfrica"/>
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="@dimen/indentation_50"
+        android:layout_height="@dimen/indentation_50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/ic_share_cabinet" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/indentation_100"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="@dimen/indentation_20"
+        android:layout_marginEnd="4dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"/>
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/indentation_10"
+        android:layout_marginEnd="8dp"
+        android:letterSpacing="-0.01"
+        android:lines="3"
+        android:textColor="@color/text_color_secondary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco… "/>
+
+    <TextView
+        android:id="@+id/pubDateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/indentation_16"
+        android:letterSpacing="-0.01"
+        android:textColor="@color/light_grey_blue"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/descriptionTextView"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+        tools:text="28.02.18"/>
+
+    <Button
+        android:id="@+id/readMoreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@color/transparent"
+        android:fontFamily="@string/medium"
+        android:text="@string/btn_show_more"
+        android:textColor="@color/cornflower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+        />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/divider_dots_the_shortest"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/readMoreButton"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

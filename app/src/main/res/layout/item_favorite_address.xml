@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_star_my_fav_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:src="@drawable/vertical_dots_short"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvFavoriteName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/black_87"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/ivMore"
+        app:layout_constraintStart_toEndOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Wife`s office" />
+
+    <TextView
+        android:id="@+id/tvFavoriteAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvFavoriteName"
+        app:layout_constraintEnd_toStartOf="@id/ivMore"
+        app:layout_constraintStart_toEndOf="@id/ivIcon"
+        android:layout_marginStart="18dp"
+        tools:text="9670 Shettima A Munguno Street"
+        />
+
+</android.support.constraint.ConstraintLayout>
