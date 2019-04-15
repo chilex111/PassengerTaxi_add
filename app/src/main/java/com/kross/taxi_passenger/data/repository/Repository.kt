@@ -64,7 +64,7 @@ class Repository(private val serverCommunicator: ServerCommunicator,
     fun phoneConfirm(contentType: String,
                      apiKey: String,
                      cacheControl: String,
-                     jsonObject: JsonObject): Single<PhoneConfirm> {
+                     jsonObject: JsonObject): Single<PhoneConfirmModel> {
         return serverCommunicator.phoneConfirm(contentType, apiKey, cacheControl, jsonObject)
     }
 

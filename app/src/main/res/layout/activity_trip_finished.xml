@@ -102,13 +102,13 @@
                 android:textColor="@color/colorWhite"
                 android:layout_marginTop="@dimen/indentation_24"
                 android:elevation="@dimen/indentation_4"
-                android:onClick="needHelpTapped"
                 app:backgroundTint="@color/button_selector_purple"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/topLayout"
                 />
-
+<!--
+            android:onClick="needHelpTapped"-->
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/bottomLayout"
                 android:layout_width="match_parent"

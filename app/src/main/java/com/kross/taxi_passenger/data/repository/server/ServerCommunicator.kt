@@ -24,7 +24,7 @@ class ServerCommunicator(private val apiService: ApiService) {
     fun phoneConfirm(contentType: String,
                      apiKey: String,
                      cacheControl: String,
-                     jsonObject: JsonObject): Single<PhoneConfirm> =
+                     jsonObject: JsonObject): Single<PhoneConfirmModel> =
             apiService
                     .phoneConfirm(contentType, apiKey, cacheControl, jsonObject)
                     .compose(singleTransformer())

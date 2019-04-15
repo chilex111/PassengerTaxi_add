@@ -188,7 +188,8 @@ class MapViewModel(application: Application,
         repository.setNewOrder(token, order).subscribe({
             orderIdLiveData.value = it
 
-        }, {
+        },
+                {
             print("error sending_push")
 
         })

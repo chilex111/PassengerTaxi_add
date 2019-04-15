@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:onClick="addToFavourite"
         android:contentDescription="@string/app_name" />
-
+<!--
+    android:onClick="addToFavourite"-->
 </android.support.constraint.ConstraintLayout>

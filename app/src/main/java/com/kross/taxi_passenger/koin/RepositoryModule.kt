@@ -51,13 +51,13 @@ private fun provideDatabase(context: Context) = Room.databaseBuilder(context, Da
 private fun provideSharedPrefs(context: Context) = context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
 private fun provideSocketCommunicator(context: Context, orderRepository: OrderRepository) = SocketCommunicator(context, orderRepository)
 
-private const val API_URL = "https://api-dev.kross.taxi/api/v1/"
+private const val API_URL = "https://driver-dev.kross.app/api/v1/"
 private fun provideServerCommunicator(): ServerCommunicator {
     val okHttpClientBuilder = OkHttpClient.Builder()
-            .connectionPool(ConnectionPool(5, 30, TimeUnit.SECONDS))
-            .connectTimeout(30, TimeUnit.SECONDS)
-            .readTimeout(30, TimeUnit.SECONDS)
-            .writeTimeout(30, TimeUnit.SECONDS)
+            .connectionPool(ConnectionPool(5, 60, TimeUnit.SECONDS))
+            .connectTimeout(60, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS)
+            .writeTimeout(60, TimeUnit.SECONDS)
 
     if (BuildConfig.DEBUG) {
         val httpLoggingInterceptor = HttpLoggingInterceptor()

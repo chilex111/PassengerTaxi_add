@@ -8,19 +8,20 @@ import com.google.gson.JsonObject
 import com.kross.taxi_passenger.data.repository.Repository
 import com.kross.taxi_passenger.data.repository.server.pojo.response.HelpList
 import com.kross.taxi_passenger.data.repository.server.pojo.response.PhoneConfirm
+import com.kross.taxi_passenger.data.repository.server.pojo.response.PhoneConfirmModel
 import com.kross.taxi_passenger.domain.BaseViewModel
 import com.kross.taxi_passenger.presentation.widget.SingleLiveEvent
 import com.kross.taxi_passenger.utils.debugLog
 
 class SupportViewModel(application: Application, private val repository: Repository) : BaseViewModel(application) {
 
-    private val liveDataPhoneConfirm = MutableLiveData<PhoneConfirm>()
+    private val liveDataPhoneConfirm = MutableLiveData<PhoneConfirmModel>()
     private val liveDataFAQ = MutableLiveData<List<HelpList>>()
     private val liveDataError = MutableLiveData<String>()
     val progressLiveData = SingleLiveEvent<Boolean>()
     fun postHelp(contentType: String, apiKey: String, cacheControl: String, jsonObject: JsonObject){
         repository.phoneConfirm(contentType, apiKey, cacheControl, jsonObject).subscribe(
-                {phoneConfirm: PhoneConfirm? ->
+                {phoneConfirm: PhoneConfirmModel? ->
                     liveDataPhoneConfirm.value = phoneConfirm },
                 {throwable: Throwable? ->
                     liveDataError.value = throwable?.message

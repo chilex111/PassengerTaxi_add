@@ -574,7 +574,7 @@ class MapFragment : BaseMapFragment(), BottomDialogChoseTripOwner.OnClick, View.
         googleMap.addPolyline(PolylineOptions()
                 .addAll(points)
                 .width(6f)
-                .color(ContextCompat.getColor(context!!, R.color.text_color_main)))
+                .color(ContextCompat.getColor(context!!, R.color.purple_dark)))
         val builder = LatLngBounds.builder()
         points.forEach {
             builder.include(it)

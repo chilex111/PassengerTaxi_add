@@ -13,6 +13,7 @@ import com.facebook.accountkit.ui.LoginType
 import com.facebook.accountkit.ui.SkinManager
 import com.kross.taxi_passenger.R
 import com.kross.taxi_passenger.data.repository.server.pojo.response.PhoneConfirm
+import com.kross.taxi_passenger.data.repository.server.pojo.response.PhoneConfirmModel
 import com.kross.taxi_passenger.domain.LoginViewModel
 import com.kross.taxi_passenger.presentation.screen.authorization.AuthorizationActivity
 import com.kross.taxi_passenger.presentation.screen.base.BaseActivity
@@ -56,16 +57,16 @@ class LoginActivity : BaseActivity(){
     fun login(loginResult: AccountKitLoginResult){
         val jsonObject  = loginViewModel.createJsonObject(resources.getInteger(R.integer.user_type), loginResult.authorizationCode.toString())
         loginViewModel.phoneConfirm(resources.getString(R.string.CONTENT_TYPE), getStringPreference(R.string.API_KEY), resources.getString(R.string.CACHE_CONNTROL), jsonObject)
-        loginViewModel.getLiveDataPhoneConfirm().observe(this, Observer<PhoneConfirm> {
-            val phone = it?.phoneNumber?.let {return@let it}
+        loginViewModel.getLiveDataPhoneConfirm().observe(this, Observer<PhoneConfirmModel> {
+            val phone = it?.data?.phoneNumber?.let {return@let it}
 
-            it?.token?.let {
+            it?.data!!.token.let {
                 RegistrationActivity.start(this, phone, getString(R.string.KEY_INTENT_REGISTRATION_PHONE), it, getString(R.string.KEY_INTENT_REGISTRATION_TOKEN))
             }
-            it?.userId?.let {
+          /*  it?.userId?.let {
                 saveToSharedPreference(R.string.user_id, it)
                 AuthorizationActivity.start(this, phone, getString(R.string.KEY_INTENT_AUTHORIZATION))
-            }
+            }*/
         })
         loginViewModel.getLiveDataError().observe(this, Observer<String> {
             it?.let {

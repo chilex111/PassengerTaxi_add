@@ -106,10 +106,8 @@ class WaypointsFragment : BasePointFragment() {
         btn_add_work.text = getString(R.string.add_work)
 
         waypointsViewModel.getRecent().observe(this, Observer {
-            it?.let { it1 ->
+                createRecentList(it!!)
 
-                createRecentList(it1)
-            }
         })
 
         waypointsViewModel.getUserPoints().observe(this, Observer { it ->

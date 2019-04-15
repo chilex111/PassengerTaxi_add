@@ -1,5 +1,7 @@
 package com.kross.taxi_passenger.presentation.screen.trip_details.adapter
 
+import android.annotation.TargetApi
+import android.os.Build
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -17,8 +19,8 @@ enum class AddressHolderEnum {
 
     address, favourite;
 
-    var identifier: Int = 0
-    get() {
+    val identifier: Int
+        get() {
         when(this) {
             address -> return R.layout.item_address_trip
             favourite -> return R.layout.item_add_to_fav_address
@@ -46,11 +48,13 @@ class AddressViewHolder(override val containerView: View,
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.M)
     fun configure(address: StubWaypointAddress, isLast: Boolean) {
         point = address
         addressTextView.text = address.address
         dots.visibleOrGone(!isLast)
         iv_pin.image = containerView.context.getDrawable(address.state.pointIcon)
+
         addressTextView.setTextColor(containerView.context.getColor(if (address.state == PointState.passed) R.color.light_grey else R.color.text_color_main))
         buttonEdit.visibleOrGone(address.state == PointState.next)
     }

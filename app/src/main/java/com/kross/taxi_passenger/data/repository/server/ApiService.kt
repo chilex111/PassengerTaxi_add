@@ -38,11 +38,11 @@ interface ApiService {
     @GET("/all")
     fun getAll(): Single<List<ExampleEntity>>
 
-    @POST("phone.confirm")
+    @POST("auth/confirm")
     fun phoneConfirm(@Header("Content-Type") contentType: String,
                      @Header("Authorization") apiKey: String,
                      @Header("Cache-Control") cacheControl: String,
-                     @Body jsonObject: JsonObject): Single<PhoneConfirm>
+                     @Body jsonObject: JsonObject): Single<PhoneConfirmModel>
 
     @PUT("https://api-dev.kross.taxi/api/v1/passenger/driver.release/{driver_id}/{car_id}")
     fun driverRelease(@Header("Authorization") apiKey: String,
